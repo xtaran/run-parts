@@ -8,10 +8,10 @@ t/manifest.t
 t/pod-coverage.t
 t/pod.t
 t/boilerplate.t
-t/basic-dummy/bar.bla
+t/basic-dummy/bar
 t/basic-dummy/fnord~
 t/basic-dummy/foo
-t/basic-dummy/script.pl
-t/basic-dummy/script.pl~
-t/basic-dummy/script2.pl
+t/basic-dummy/script
+t/basic-dummy/script~
+t/basic-dummy/script2
 t/basic-functionality.t
