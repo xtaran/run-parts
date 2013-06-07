@@ -36,6 +36,12 @@ To install this module, run the following commands:
 	./Build install
 
 
+CODE
+
+You can find a git repository of Run::Parts' code at
+L<https://github.com/xtaran/run-parts>.
+
+
 SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the
