@@ -13,4 +13,5 @@ t/basic-dummy/fnord~
 t/basic-dummy/foo
 t/basic-dummy/script.pl
 t/basic-dummy/script.pl~
+t/basic-dummy/script2.pl
 t/basic-functionality.t
