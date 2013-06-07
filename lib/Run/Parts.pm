@@ -6,7 +6,7 @@ use warnings FATAL => 'all';
 
 =head1 NAME
 
-Run::Parts - The great new Run::Parts!
+Run::Parts - Perl interface to Debian's run-parts tool
 
 =head1 VERSION
 
@@ -19,9 +19,19 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+Perl interface to Debian's run-parts tool. run-parts runs all the
+executable files named within constraints described below, found in
+the given directory.  Other files and directories are silently
+ignored.
 
-Perhaps a little code snippet.
+Additionally it can just print the names of the all matching files
+(not limited to executables, but ignores blacklisted files like
+e.g. backup files), but don't actually run them.
+
+This is useful when functionality or configuration is split over
+multiple files in one directory.
+
+TODO: Perhaps a little code snippet.
 
     use Run::Parts;
 
@@ -49,9 +59,13 @@ sub function1 {
 sub function2 {
 }
 
+=head1 SEE ALSO
+
+run-parts(8)
+
 =head1 AUTHOR
 
-Axel Beckert, C<< <abe at deuxchevaux.org> >>
+Axel Beckert, C<< <abe@deuxchevaux.org> >>
 
 =head1 BUGS
 
