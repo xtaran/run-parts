@@ -31,32 +31,93 @@ e.g. backup files), but don't actually run them.
 This is useful when functionality or configuration is split over
 multiple files in one directory.
 
-TODO: Perhaps a little code snippet.
+Perhaps a little code snippet.
 
     use Run::Parts;
 
-    my $foo = Run::Parts->new();
-    ...
+    my $rp = Run::Parts->new('directory);
+
+    my @file_list        = $rp->list;
+    my @executables_list = $rp->test;
+    my $commands_output  = $rp->run;
+    …
 
 =head1 EXPORT
 
 A list of functions that can be exported.  You can delete this section
 if you don't export anything, such as for a purely object-oriented module.
 
-=head1 SUBROUTINES/METHODS
+=head1 METHODS
 
-=head2 function1
+=head2 new (Constructor)
+
+Creates a new Run::Parts object. Takes one parameter, the directory on
+which run-parts should work.
 
 =cut
 
-sub function1 {
+sub new {
+    my $self = {};
+    bless($self, shift);
+    $self->{dir} = shift;
+
+    return $self
 }
 
-=head2 function2
+=head2 run_parts_command
+
+Returns the run-parts to run with the given command parameter
 
 =cut
 
-sub function2 {
+sub run_parts_command {
+    my $self = shift;
+    my $rp_cmd = shift;
+
+    my $command =
+        "/bin/run-parts " .
+        ((defined($rp_cmd) and $rp_cmd ne '') ? "'--$rp_cmd'" : '') .
+        " '".$self->{dir}."'";
+
+    return wantarray ?
+        do { my @l = `$command`; chomp(@l); return @l } :
+        `$command`;
+}
+
+=head2 list
+
+Lists all relevant files in the given directory. Equivalent to
+"run-parts --list".
+
+=cut
+
+sub list {
+    my $self = shift;
+    return $self->run_parts_command('list');
+}
+
+=head2 test
+
+Lists all relevant executables in the given directory. Equivalent to
+"run-parts --test".
+
+=cut
+
+sub test {
+    my $self = shift;
+    return $self->run_parts_command('test');
+}
+
+=head2 run
+
+Runs all relevant executables in the given directory. Equivalent to
+"run-parts".
+
+=cut
+
+sub run {
+    my $self = shift;
+    return $self->run_parts_command();
 }
 
 =head1 SEE ALSO
