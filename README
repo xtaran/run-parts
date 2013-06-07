@@ -1,15 +1,29 @@
-Run-Parts
+Run::Parts
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+Run::Parts is a Perl interface to Debian's run-parts tool.
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+run-parts runs all the executable files named within constraints
+described below, found in the given directory.  Other files and
+directories are silently ignored.
+
+Additionally it can just print the names of the all matching files
+(not limited to executables, but ignores blacklisted files like
+e.g. backup files), but don't actually run them.
+
+This is useful when functionality or configuration is split over
+multiple files in one directory. A typical convention is that the
+directory name ends in ".d". Common examples for such splittet
+configuration directories:
+
+  /etc/cron.d/
+  /etc/apt/apt.conf.d/
+  /etc/apt/sources.list.d/,
+  /etc/aptitude-robot/pkglist.d/
+  /etc/logrotate.d/
+  /etc/rsyslog.d/
+
+It may or may not work with RedHat's simplified shell-script based
+reimplementation of Debian's run-parts.
 
 
 INSTALLATION
