@@ -4,6 +4,7 @@ use 5.010;
 use strict;
 use warnings FATAL => 'all';
 
+=encoding utf8
 =head1 NAME
 
 Run::Parts - Perl interface to Debian's run-parts tool
@@ -14,7 +15,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS

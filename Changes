@@ -1,5 +1,9 @@
 Revision history for Run-Parts
 
+0.02    
+
+	Add POD encoding to make Test::Pod happy
+
 0.01    Fri  7 Jun 20:26:57 CEST 2013
 
         Initial release. More or less a proof of concept.
