@@ -10,7 +10,7 @@ my $builder = Module::Build->new(
     dist_version_from   => 'lib/Run/Parts.pm',
     release_status      => 'stable',
     configure_requires => {
-        'Module::Build' => 0,
+        'Module::Build' => '0.37',
     },
     build_requires => {
         'Test::More' => 0,
