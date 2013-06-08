@@ -14,6 +14,7 @@ my $builder = Module::Build->new(
     },
     build_requires => {
         'Test::More' => 0,
+        'Test::Differences' => 0,
     },
     requires => {
         #'ABC'              => 1.6,
