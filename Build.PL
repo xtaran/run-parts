@@ -21,7 +21,7 @@ my $builder = Module::Build->new(
         #'ABC'              => 1.6,
         #'Foo::Bar::Module' => 5.0401,
     },
-    add_to_cleanup     => [ 'Run-Parts-*' ],
+    add_to_cleanup     => [ 'Run-Parts-*', 'Makefile.PL' ],
     create_makefile_pl => 'traditional',
 );
 
