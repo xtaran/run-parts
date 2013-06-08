@@ -1,6 +1,6 @@
 Revision history for Run-Parts
 
-0.02    
+0.02    Sat  8 Jun 20:04:53 CEST 2013
 
 	Skip functionality tests if /bin/run-parts is not there or not
 	executable.
