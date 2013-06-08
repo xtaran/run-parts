@@ -7,7 +7,8 @@ Revision history for Run-Parts
 
 	Add POD encoding to make Test::Pod happy
 
-	State that the test suite needs Test::Differences
+	State in Build.PL that the test suite needs Test::Differences and
+	that Run::Parts itself needs Perl >= 5.10.
 
 0.01    Fri  7 Jun 20:26:57 CEST 2013
 

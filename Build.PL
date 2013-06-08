@@ -17,6 +17,7 @@ my $builder = Module::Build->new(
         'Test::Differences' => 0,
     },
     requires => {
+        perl => '5.10.0',
         #'ABC'              => 1.6,
         #'Foo::Bar::Module' => 5.0401,
     },
