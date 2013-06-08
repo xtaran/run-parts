@@ -5,6 +5,7 @@ use strict;
 use warnings FATAL => 'all';
 
 =encoding utf8
+
 =head1 NAME
 
 Run::Parts - Perl interface to Debian's run-parts tool
