@@ -10,6 +10,8 @@ Revision history for Run-Parts
 	State in Build.PL that the test suite needs Test::Differences and
 	that Run::Parts itself needs Perl >= 5.10.
 
+        Disable Makefile.PL compatibility.
+
 0.01    Fri  7 Jun 20:26:57 CEST 2013
 
         Initial release. More or less a proof of concept.
