@@ -7,6 +7,12 @@ use Test::Differences;
 
 delete $ENV{PATH};
 
+my $runpartsbin = '/bin/run-parts';
+unless (-x $runpartsbin) {
+    plan skip_all => "$runpartsbin not found or not executable";
+    exit 0;
+}
+
 use Run::Parts;
 
 my $d = 't/basic-dummy';

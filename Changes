@@ -2,6 +2,9 @@ Revision history for Run-Parts
 
 0.02    
 
+	Skip functionality tests if /bin/run-parts is not there or not
+	executable.
+
 	Add POD encoding to make Test::Pod happy
 
 	State that the test suite needs Test::Differences
