@@ -18,6 +18,8 @@ my $builder = Module::Build->new(
     },
     requires => {
         perl => '5.10.0',
+        autodie => 0,
+        Taint::Util => 0,
         #'ABC'              => 1.6,
         #'Foo::Bar::Module' => 5.0401,
     },

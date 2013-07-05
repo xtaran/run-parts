@@ -1,16 +1,16 @@
-package Run::Parts;
+package Run::Parts::Perl;
 
 use 5.010;
 use strict;
 use warnings FATAL => 'all';
-
-use Run::Parts::Debian;
+use autodie;
+use Taint::Util;
 
 =encoding utf8
 
 =head1 NAME
 
-Run::Parts - Perl interface to Debian's run-parts tool
+Run::Parts::Perl - Perl interface to Debian's run-parts tool
 
 =head1 VERSION
 
@@ -18,7 +18,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.01';
 
 
 =head1 SYNOPSIS
@@ -37,9 +37,9 @@ multiple files in one directory.
 
 Perhaps a little code snippet.
 
-    use Run::Parts;
+    use Run::Parts::Perl;
 
-    my $rp = Run::Parts->new('directory');
+    my $rp = Run::Parts::Perl->new('directory');
 
     my @file_list        = $rp->list;
     my @executables_list = $rp->test;
@@ -65,82 +65,83 @@ sub new {
     bless($self, shift);
     $self->{dir} = shift;
 
-    my $backend = shift;
-    if (defined $backend) {
-        if (ref $backend) {
-            $self->{backend} = $backend->new($self->{dir});
-        } elsif ($backend eq 'debian' or $backend eq 'run-parts') {
-            use Run::Parts::Debian;
-            $self->{backend} = Run::Parts::Debian->new($self->{dir});
-        } elsif ($backend eq 'perl' or $backend eq 'module') {
-            use Run::Parts::Perl;
-            $self->{backend} = Run::Parts::Perl->new($self->{dir});
-        } else {
-            warn "Unknown backend $backend in use";
-            require $backend;
-            $self->{backend} = $backend->new($self->{dir});
-        }
-    } else {
-        if (-x '/bin/run-parts') {
-            $self->{backend} = Run::Parts::Debian->new($self->{dir});
-        } else {
-            $self->{backend} = Run::Parts::Perl->new($self->{dir});
-        }
-    }
-
     return $self;
 }
 
 =head2 run_parts_command
 
-Returns the run-parts to run with the given command parameter
+Executes the given action with the given parameters
 
 =cut
 
 sub run_parts_command {
     my $self = shift;
-    return $self->{backend}->run_parts_command(@_);
+    my $rp_cmd = shift // 'run';
+
+    my @result = $self->$rp_cmd(@_);
+
+    return wantarray ? @result : join("\n", @result)."\n";
 }
 
 =head2 list
 
 Lists all relevant files in the given directory. Equivalent to
-"run-parts --list".
+"run-parts --list". Returns an array.
 
 =cut
 
 sub list {
     my $self = shift;
-    return $self->run_parts_command('list');
+    my $dir = $self->{dir};
+
+    opendir(my $dh, $dir);
+    my @list = sort map {
+        if (defined($dir) and $dir ne '') {
+            "$dir/$_";
+        } else {
+            $_;
+        }
+    } grep {
+        /^[-A-Za-z0-9_]+$/
+    } readdir($dh);
 }
 
 =head2 test
 
 Lists all relevant executables in the given directory. Equivalent to
-"run-parts --test".
+"run-parts --tests". Returns an array.
 
 =cut
 
 sub test {
     my $self = shift;
-    return $self->run_parts_command('test');
+    my $dir = $self->{dir};
+
+    return grep { -x } $self->list($dir);
 }
 
 =head2 run
 
-Runs all relevant executables in the given directory. Equivalent to
-"run-parts".
+Executes all relevant executables in the given directory. Equivalent to
+"run-parts --tests". Returns an array.
 
 =cut
 
 sub run {
     my $self = shift;
-    return $self->run_parts_command();
+    my $dir = $self->{dir};
+
+    return map {
+        untaint($_);
+        my $output = `$_`;
+        chomp($output);
+        $output;
+    } $self->test($dir);
 }
 
 =head1 SEE ALSO
 
-run-parts(8)
+Run::Parts, run-parts(8)
 
 =head1 AUTHOR
 
