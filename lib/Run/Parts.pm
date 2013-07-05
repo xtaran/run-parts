@@ -37,7 +37,7 @@ Perhaps a little code snippet.
 
     use Run::Parts;
 
-    my $rp = Run::Parts->new('directory);
+    my $rp = Run::Parts->new('directory');
 
     my @file_list        = $rp->list;
     my @executables_list = $rp->test;
