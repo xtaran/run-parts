@@ -66,7 +66,7 @@ sub new {
     $self->{dir} = shift;
     $self->{backend} = Run::Parts::Debian->new($self->{dir});
 
-    return $self
+    return $self;
 }
 
 =head2 run_parts_command
