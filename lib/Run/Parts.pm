@@ -63,7 +63,7 @@ sub new {
     bless($self, shift);
     $self->{dir} = shift;
 
-    return $self
+    return $self;
 }
 
 =head2 run_parts_command
