@@ -2,7 +2,7 @@
 use 5.006;
 use strict;
 use warnings FATAL => 'all';
-use Test::More tests => 12;
+use Test::More tests => 18;
 use Test::Differences;
 
 delete $ENV{PATH};
@@ -12,13 +12,18 @@ my $d = 't/basic-dummy';
 
 use Run::Parts;
 
+# Testing the Debian backend
 SKIP: {
     skip("$runpartsbin not found or not executable", 6)
         unless -x $runpartsbin;
     run_test_on_rp($d, 'debian')
 }
 
+# Testing the perl backend
 run_test_on_rp($d, 'perl');
+
+# Testing the automatically chosen backend
+run_test_on_rp($d);
 
 sub run_test_on_rp {
     my ($d, $desc) = @_;
