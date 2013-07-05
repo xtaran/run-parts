@@ -10,7 +10,7 @@ use Taint::Util;
 
 =head1 NAME
 
-Run::Parts::Perl - Perl interface to Debian's run-parts tool
+Run::Parts::Perl - Pure Perl implementation of Debian's run-parts tool
 
 =head1 VERSION
 
@@ -23,10 +23,11 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Perl interface to Debian's run-parts tool. run-parts runs all the
-executable files named within constraints described below, found in
-the given directory.  Other files and directories are silently
-ignored.
+Pure Perl reimplementation of basic functionality of Debian's run-parts tool.
+
+run-parts runs all the executable files named within constraints
+described below, found in the given directory.  Other files and
+directories are silently ignored.
 
 Additionally it can just print the names of the all matching files
 (not limited to executables, but ignores blacklisted files like
@@ -35,21 +36,8 @@ e.g. backup files), but don't actually run them.
 This is useful when functionality or configuration is split over
 multiple files in one directory.
 
-Perhaps a little code snippet.
-
-    use Run::Parts::Perl;
-
-    my $rp = Run::Parts::Perl->new('directory');
-
-    my @file_list        = $rp->list;
-    my @executables_list = $rp->test;
-    my $commands_output  = $rp->run;
-    …
-
-=head1 EXPORT
-
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+This module is not thought to be used directly and its interface may
+change. See Run::Parts for a stable user interface.
 
 =head1 METHODS
 

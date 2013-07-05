@@ -33,21 +33,8 @@ e.g. backup files), but don't actually run them.
 This is useful when functionality or configuration is split over
 multiple files in one directory.
 
-Perhaps a little code snippet.
-
-    use Run::Parts::Debian;
-
-    my $rp = Run::Parts::Debian->new('directory');
-
-    my @file_list        = $rp->list;
-    my @executables_list = $rp->test;
-    my $commands_output  = $rp->run;
-    …
-
-=head1 EXPORT
-
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+This module is not thought to be used directly and its interface may
+change. See Run::Parts for a stable user interface.
 
 =head1 METHODS
 

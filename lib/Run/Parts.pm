@@ -4,17 +4,15 @@ use 5.010;
 use strict;
 use warnings FATAL => 'all';
 
-use Run::Parts::Debian;
-
 =encoding utf8
 
 =head1 NAME
 
-Run::Parts - Perl interface to Debian's run-parts tool
+Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.03
 
 =cut
 
@@ -23,10 +21,11 @@ our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
-Perl interface to Debian's run-parts tool. run-parts runs all the
-executable files named within constraints described below, found in
-the given directory.  Other files and directories are silently
-ignored.
+Run::Parts offers functionality of Debian's run-parts tool in Perl.
+
+run-parts runs all the executable files named within constraints
+described below, found in the given directory.  Other files and
+directories are silently ignored.
 
 Additionally it can just print the names of the all matching files
 (not limited to executables, but ignores blacklisted files like
@@ -39,17 +38,27 @@ Perhaps a little code snippet.
 
     use Run::Parts;
 
-    my $rp = Run::Parts->new('directory');
+    my $rp  = Run::Parts->new('directory'); # chooses backend automatically
+    my $rpp = Run::Parts->new('directory', 'perl'); # pure perl backend
+    my $rpd = Run::Parts->new('directory', 'debian'); # uses /bin/run-parts
 
     my @file_list        = $rp->list;
-    my @executables_list = $rp->test;
-    my $commands_output  = $rp->run;
-    …
+    my @executables_list = $rpp->test;
+    my $commands_output  = $rpd->run;
+    ...
 
-=head1 EXPORT
+=head1 BACKENDS
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+Run::Parts contains two backend implementation. Run::Parts::Debian
+actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
+implementation of a basic set of run-parts' functionality.
+
+Run::Parts::Debian may or may not work with RedHat's simplified
+shell-script based reimplementation of Debian's run-parts.
+
+By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
+exists, Run::Parts::Perl otherwise. But you can also choose any of the
+backends explicitly.
 
 =head1 METHODS
 
@@ -140,7 +149,7 @@ sub run {
 
 =head1 SEE ALSO
 
-run-parts(8)
+run-parts(8), Run::Parts::Debian, Run::Parts::Perl
 
 =head1 AUTHOR
 

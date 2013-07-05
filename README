@@ -1,6 +1,6 @@
 Run::Parts
 
-Run::Parts is a Perl interface to Debian's run-parts tool.
+Run::Parts offers functionality of Debian's run-parts tool in Perl.
 
 run-parts runs all the executable files named within constraints
 described below, found in the given directory.  Other files and
@@ -22,9 +22,16 @@ configuration directories:
   /etc/logrotate.d/
   /etc/rsyslog.d/
 
-It may or may not work with RedHat's simplified shell-script based
-reimplementation of Debian's run-parts.
+Run::Parts contains two backend implementation. Run::Parts::Debian
+actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
+implementation of a basic set of run-parts' functionality.
 
+Run::Parts::Debian may or may not work with RedHat's simplified
+shell-script based reimplementation of Debian's run-parts.
+
+By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
+exists, Run::Parts::Perl otherwise. But you can also choose any of the
+backends explicitly.
 
 INSTALLATION
 
