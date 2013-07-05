@@ -1,6 +1,7 @@
 Build.PL
 Changes
 lib/Run/Parts.pm
+lib/Run/Parts/Debian.pm
 MANIFEST			This list of files
 META.json
 META.yml

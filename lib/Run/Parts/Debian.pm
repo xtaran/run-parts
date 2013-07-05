@@ -1,16 +1,14 @@
-package Run::Parts;
+package Run::Parts::Debian;
 
 use 5.010;
 use strict;
 use warnings FATAL => 'all';
 
-use Run::Parts::Debian;
-
 =encoding utf8
 
 =head1 NAME
 
-Run::Parts - Perl interface to Debian's run-parts tool
+Run::Parts::Debian - Perl interface to Debian's run-parts tool
 
 =head1 VERSION
 
@@ -18,7 +16,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.01';
 
 
 =head1 SYNOPSIS
@@ -37,9 +35,9 @@ multiple files in one directory.
 
 Perhaps a little code snippet.
 
-    use Run::Parts;
+    use Run::Parts::Debian;
 
-    my $rp = Run::Parts->new('directory');
+    my $rp = Run::Parts::Debian->new('directory');
 
     my @file_list        = $rp->list;
     my @executables_list = $rp->test;
@@ -64,7 +62,6 @@ sub new {
     my $self = {};
     bless($self, shift);
     $self->{dir} = shift;
-    $self->{backend} = Run::Parts::Debian->new($self->{dir});
 
     return $self
 }
@@ -77,48 +74,21 @@ Returns the run-parts to run with the given command parameter
 
 sub run_parts_command {
     my $self = shift;
-    return $self->{backend}->run_parts_command(@_);
-}
+    my $rp_cmd = shift;
 
-=head2 list
+    my $command =
+        "/bin/run-parts " .
+        ((defined($rp_cmd) and $rp_cmd ne '') ? "'--$rp_cmd'" : '') .
+        " '".$self->{dir}."'";
 
-Lists all relevant files in the given directory. Equivalent to
-"run-parts --list".
-
-=cut
-
-sub list {
-    my $self = shift;
-    return $self->run_parts_command('list');
-}
-
-=head2 test
-
-Lists all relevant executables in the given directory. Equivalent to
-"run-parts --test".
-
-=cut
-
-sub test {
-    my $self = shift;
-    return $self->run_parts_command('test');
-}
-
-=head2 run
-
-Runs all relevant executables in the given directory. Equivalent to
-"run-parts".
-
-=cut
-
-sub run {
-    my $self = shift;
-    return $self->run_parts_command();
+    return wantarray ?
+        do { my @l = `$command`; chomp(@l); return @l } :
+        `$command`;
 }
 
 =head1 SEE ALSO
 
-run-parts(8)
+Run::Parts, run-parts(8)
 
 =head1 AUTHOR
 
