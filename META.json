@@ -1,0 +1,57 @@
+{
+   "abstract" : "Offers functionality of Debian's run-parts tool in Perl.",
+   "author" : [
+      "Axel Beckert <abe@deuxchevaux.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Run-Parts",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::Differences" : "0",
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.37"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Taint::Util" : "0",
+            "autodie" : "0",
+            "perl" : "v5.10.0"
+         }
+      }
+   },
+   "provides" : {
+      "Run::Parts" : {
+         "file" : "lib/Run/Parts.pm",
+         "version" : "0.03"
+      },
+      "Run::Parts::Debian" : {
+         "file" : "lib/Run/Parts/Debian.pm",
+         "version" : "0.01"
+      },
+      "Run::Parts::Perl" : {
+         "file" : "lib/Run/Parts/Perl.pm",
+         "version" : "0.01"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.03"
+}
