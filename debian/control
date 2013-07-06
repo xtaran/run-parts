@@ -5,6 +5,7 @@ Maintainer: Axel Beckert <abe@debian.org>
 Build-Depends: debhelper (>= 9),
                libautodie-perl,
                libtaint-util-perl,
+               libtest-differences-perl,
                perl
 Standards-Version: 3.9.4
 Homepage: http://metacpan.org/release/Run-Parts/
