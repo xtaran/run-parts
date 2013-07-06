@@ -41,16 +41,21 @@ sub run_test_on_rp {
                "$d/bar\n$d/foo\n$d/script\n$d/script2\n",
                "Returns list of files in string context");
 
-    # List executable files
-    eq_or_diff([$rp->test],
-               [map { "$d/$_" } qw[script script2]],
-               "Returns list of executables in array context");
-    eq_or_diff(''.$rp->test,
-               "$d/script\n$d/script2\n",
-               "Returns list of executables in string context");
+  SKIP: {
+      skip("Listing unix executables on DOS or Windows does not work", 3)
+          if ($^O eq 'dos' or $^O eq 'os2' or $^O eq 'MSWin32');
 
-    # Executes executable files
-    eq_or_diff(''.$rp->run,
-               "Works\nWorks, too!\n",
-               "Returns output of ran executables");
+      # List executable files
+      eq_or_diff([$rp->test],
+                 [map { "$d/$_" } qw[script script2]],
+                 "Returns list of executables in array context");
+      eq_or_diff(''.$rp->test,
+                 "$d/script\n$d/script2\n",
+                 "Returns list of executables in string context");
+
+      # Executes executable files
+      eq_or_diff(''.$rp->run,
+                 "Works\nWorks, too!\n",
+                 "Returns output of ran executables");
+    }
 }
