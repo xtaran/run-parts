@@ -9,6 +9,12 @@ my $builder = Module::Build->new(
     dist_author         => q{Axel Beckert <abe@deuxchevaux.org>},
     dist_version_from   => 'lib/Run/Parts.pm',
     release_status      => 'stable',
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/xtaran/run-parts',
+            bugtracker => "https://rt.cpan.org/Dist/Display.html?Name=Run-Parts",
+        }
+    },
     configure_requires => {
         'Module::Build' => '0.37',
     },
