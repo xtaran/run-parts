@@ -1,0 +1,33 @@
+---
+abstract: "Offers functionality of Debian's run-parts tool in Perl."
+author:
+  - 'Axel Beckert <abe@deuxchevaux.org>'
+build_requires:
+  Test::Differences: 0
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.37
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Run-Parts
+provides:
+  Run::Parts:
+    file: lib/Run/Parts.pm
+    version: 0.03
+  Run::Parts::Debian:
+    file: lib/Run/Parts/Debian.pm
+    version: 0.01
+  Run::Parts::Perl:
+    file: lib/Run/Parts/Perl.pm
+    version: 0.01
+requires:
+  Taint::Util: 0
+  autodie: 0
+  perl: v5.10.0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.03
