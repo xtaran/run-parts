@@ -30,9 +30,6 @@ Description: Offers run-parts' functionality in Perl
  actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
  implementation of a basic set of run-parts' functionality.
  .
- Run::Parts::Debian may or may not work with RedHat's simplified
- shell-script based reimplementation of Debian's run-parts.
- .
  By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
  exists, Run::Parts::Perl otherwise. But you can also choose any of
  the backends explicitly.
