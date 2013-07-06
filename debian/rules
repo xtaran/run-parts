@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean -Xt/basic-dummy/fnord~ -Xt/basic-dummy/script~

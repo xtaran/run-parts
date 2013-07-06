@@ -1,0 +1,38 @@
+Source: librun-parts-perl
+Section: perl
+Priority: optional
+Maintainer: Axel Beckert <abe@debian.org>
+Build-Depends: debhelper (>= 9),
+               libautodie-perl,
+               libtaint-util-perl,
+               perl
+Standards-Version: 3.9.4
+Homepage: http://metacpan.org/release/Run-Parts/
+Vcs-Browser: https://github.com/xtaran/run-parts
+Vcs-Git: git://github.com/xtaran/run-parts.git -b debian
+
+Package: librun-parts-perl
+Architecture: all
+Depends: libautodie-perl,
+         libtaint-util-perl,
+         ${misc:Depends},
+         ${perl:Depends}
+Description: Offers run-parts' functionality in Perl
+ run-parts and hence Run::Parts runs all the executable files named
+ within constraints described below, found in the given directory.
+ Other files and directories are silently ignored.
+ .
+ Additionally they can just print the names of the all matching files
+ (not limited to executables, but ignores blacklisted files like
+ e.g. backup files), but don't actually run them.
+ .
+ Run::Parts contains two backend implementation. Run::Parts::Debian
+ actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
+ implementation of a basic set of run-parts' functionality.
+ .
+ Run::Parts::Debian may or may not work with RedHat's simplified
+ shell-script based reimplementation of Debian's run-parts.
+ .
+ By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
+ exists, Run::Parts::Perl otherwise. But you can also choose any of
+ the backends explicitly.

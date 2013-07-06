@@ -1,0 +1,5 @@
+librun-parts-perl (0.03-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #714969)
+
+ -- Axel Beckert <abe@debian.org>  Sat, 6 Jul 2013 22:57:30 +0200
