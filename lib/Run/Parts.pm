@@ -176,11 +176,7 @@ sub lines {
     # Sanity check
     die "lines is no method" if ref $_[0];
 
-    if (wantarray) {
-        return @_
-    } else {
-        return join("\n", @_)."\n";
-    }
+    return wantarray ? @_ : join("\n", @_)."\n";
 }
 
 =head1 SEE ALSO
