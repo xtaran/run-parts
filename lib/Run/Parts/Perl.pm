@@ -22,7 +22,7 @@ our $VERSION = '0.02';
 
 # On DOS and Windows, run-parts' regular expressions are not really
 # applicable. Allow an arbitrary alphanumerical suffix there.
-my $win_suffix = ($^O =~ /^(dos|os2|MSWin32)$/) ? qr/\.[a-z0-9]+/i : qr'';
+my $win_suffix = dosish() ? qr/\.[a-z0-9]+/i : qr'';
 my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
 
 =head1 SYNOPSIS
@@ -125,13 +125,24 @@ sub run {
 
     return map {
         untaint($_);
-        if ($^O =~ /^(dos|os2|MSWin32)$/) {
-          s:/:\\:g;
-        }
+        s(/)(\\)g if dosish();
         my $output = `$_`;
         chomp($output);
         $output;
     } $self->test($dir);
+}
+
+=head1 INTERNAL FUNCTIONS
+
+=head2 dosish
+
+Returns true if ran on a dos-ish platform, i.e. MS-DOS, Windows or
+OS/2.
+
+=cut
+
+sub dosish {
+    return $^O =~ /^(dos|os2|MSWin32)$/;
 }
 
 =head1 SEE ALSO
