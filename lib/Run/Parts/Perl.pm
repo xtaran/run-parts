@@ -14,7 +14,7 @@ Run::Parts::Perl - Pure Perl implementation of Debian's run-parts tool
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
