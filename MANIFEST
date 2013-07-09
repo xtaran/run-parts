@@ -1,22 +1,22 @@
 Build.PL
 Changes
-lib/Run/Parts.pm
-lib/Run/Parts/Debian.pm
-lib/Run/Parts/Perl.pm
 MANIFEST			This list of files
 META.json
 META.yml
 README
+lib/Run/Parts.pm
+lib/Run/Parts/Debian.pm
+lib/Run/Parts/Perl.pm
 t/00-load.t
 t/basic-dummy/bar
 t/basic-dummy/fnord~
 t/basic-dummy/foo
 t/basic-dummy/script
-t/basic-dummy/script~
 t/basic-dummy/script2
+t/basic-dummy/script~
 t/basic-functionality.t
-t/compare-functionality.t
 t/boilerplate.t
+t/compare-functionality.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
