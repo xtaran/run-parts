@@ -158,21 +158,21 @@ directory. Equivalent to "cat `run-parts --list`".
 
 sub concat {
     my $self = shift;
-    return array_or_string(map { ''.read_file($_) } $self->list());
+    return lines(map { ''.read_file($_) } $self->list());
 }
 
 =head1 INTERNAL FUNCTIONS
 
-=head2 array_or_string
+=head2 lines
 
 Gets an array as parameter, returns a string with concatenated lines
 or the array depending on the context.
 
 =cut
 
-sub array_or_string {
+sub lines {
     # Sanity check
-    die "array_or_string is no method" if ref $_[0];
+    die "lines is no method" if ref $_[0];
 
     chomp(@_);
     if (wantarray) {
