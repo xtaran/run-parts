@@ -18,8 +18,12 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
+# On DOS and Windows, run-parts' regular expressions are not really
+# applicable. Allow an arbitrary alphanumerical suffix there.
+my $win_suffix = ($^O =~ /^(dos|os2|MSWin32)$/) ? qr/\.[a-z0-9]+/i : qr'';
+my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
 
 =head1 SYNOPSIS
 
@@ -90,7 +94,7 @@ sub list {
             $_;
         }
     } grep {
-        /^[-A-Za-z0-9_]+$/
+        /$file_re/
     } readdir($dh);
 }
 
