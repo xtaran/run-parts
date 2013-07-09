@@ -125,6 +125,9 @@ sub run {
 
     return map {
         untaint($_);
+        if ($^O =~ /^(dos|os2|MSWin32)$/) {
+          s:/:\\:g;
+        }
         my $output = `$_`;
         chomp($output);
         $output;

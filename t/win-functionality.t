@@ -9,7 +9,7 @@ use Test::Differences;
 if ($^O ne 'dos' and $^O ne 'os2' and $^O ne 'MSWin32' ) {
     plan skip_all => 'Tests irrelevant on non-dos-ish systems';
 } else {
-    plan tests => 12;
+    plan tests => 10;
 }
 
 delete $ENV{PATH};
@@ -51,16 +51,4 @@ sub run_test_on_rp {
     eq_or_diff(''.$rp->test,
                join('', map { "$d/$_\n" } @exe_files),
                "Returns list of executables in string context ($desc)");
-
-# Seems to fail due to autodie
-  TODO: {
-      todo_skip("There are no Windows binaries part of the test suite", 1);
-      # Skipping is necessary because TODO can't handle modules which
-      # use autodie.
-
-      # Executes executable files
-      eq_or_diff(''.$rp->run,
-                 "TODO",
-                 "Returns output of ran executables ($desc)");
-    }
 }
