@@ -20,3 +20,14 @@ t/boilerplate.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
+t/win-dummy/bar.com
+t/win-dummy/bla.bat
+t/win-dummy/foo.exe
+t/win-dummy/pfff.scr
+t/win-dummy/puff.pif
+t/win-dummy/unix.sh
+t/win-exec-dummy/bla.bat
+t/win-exec-dummy/fnord.sh
+t/win-exec-dummy/foo.bat
+t/win-exec.t
+t/win-functionality.t
