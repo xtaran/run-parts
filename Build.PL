@@ -18,7 +18,7 @@ my $builder = Module::Build->new(
     configure_requires => {
         'Module::Build' => '0.37',
     },
-    build_requires => {
+    test_requires => {
         'Test::More' => 0,
         'Test::Differences' => 0,
     },
