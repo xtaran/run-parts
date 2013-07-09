@@ -5,6 +5,7 @@ use strict;
 use warnings FATAL => 'all';
 use autodie;
 use Taint::Util;
+use Run::Parts::Common;
 
 =encoding utf8
 
@@ -89,7 +90,7 @@ sub run_parts_command {
 
     my @result = $self->$rp_cmd(@_);
 
-    return wantarray ? @result : join("\n", @result)."\n";
+    return lines(@result);
 }
 
 =head2 list
