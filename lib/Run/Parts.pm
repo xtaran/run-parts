@@ -19,6 +19,7 @@ Version 0.04
 our $VERSION = '0.04';
 
 use File::Slurp;
+use Run::Parts::Common;
 
 =head1 SYNOPSIS
 
@@ -159,24 +160,6 @@ directory. Equivalent to "cat `run-parts --list`".
 sub concat {
     my $self = shift;
     return lines(map { read_file($_, { chomp => 1 }) } $self->list());
-}
-
-=head1 INTERNAL FUNCTIONS
-
-=head2 lines
-
-Gets an array of strings as parameter.
-
-In scalar context returns a string with all lines concatenated. In
-array context it passes through the array.
-
-=cut
-
-sub lines {
-    # Sanity check
-    die "lines is no method" if ref $_[0];
-
-    return wantarray ? @_ : join("\n", @_)."\n";
 }
 
 =head1 SEE ALSO

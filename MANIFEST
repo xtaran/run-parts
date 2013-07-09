@@ -5,6 +5,7 @@ META.json
 META.yml
 README
 lib/Run/Parts.pm
+lib/Run/Parts/Common.pm
 lib/Run/Parts/Debian.pm
 lib/Run/Parts/Perl.pm
 t/00-load.t
