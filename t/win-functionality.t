@@ -14,7 +14,6 @@ if ($^O ne 'dos' and $^O ne 'os2' and $^O ne 'MSWin32' ) {
 
 delete $ENV{PATH};
 
-my $runpartsbin = '/bin/run-parts';
 my $d = 't/win-dummy';
 my @files = qw[bar.com bla.bat foo.exe pfff.scr puff.pif unix.sh];
 my @exe_files = qw[bar.com bla.bat foo.exe];
