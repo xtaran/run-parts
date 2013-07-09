@@ -30,8 +30,6 @@ my $builder = Module::Build->new(
         'Taint::Util' => 0,
         'File::Slurp' => 0,
         'Exporter::Easy' => 0,
-        #'ABC'              => 1.6,
-        #'Foo::Bar::Module' => 5.0401,
     },
     add_to_cleanup     => [ 'Run-Parts-*' ],
 );
