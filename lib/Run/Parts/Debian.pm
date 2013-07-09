@@ -3,6 +3,7 @@ package Run::Parts::Debian;
 use 5.010;
 use strict;
 use warnings FATAL => 'all';
+use Run::Parts::Common;
 
 =encoding utf8
 
@@ -68,9 +69,7 @@ sub run_parts_command {
         ((defined($rp_cmd) and $rp_cmd ne '') ? "'--$rp_cmd'" : '') .
         " '".$self->{dir}."'";
 
-    return wantarray ?
-        do { my @l = `$command`; chomp(@l); return @l } :
-        `$command`;
+    return chomped_lines(`$command`);
 }
 
 =head1 SEE ALSO
