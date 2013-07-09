@@ -58,4 +58,44 @@ sub chomped_lines {
     return lines(@_);
 }
 
+
+
+=head1 SEE ALSO
+
+Run::Parts
+
+
+=head1 AUTHOR
+
+Axel Beckert, C<< <abe@deuxchevaux.org> >>
+
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-run-parts at
+rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Run-Parts>.  I will
+be notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
+
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Run::Parts::Common
+
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2013 Axel Beckert.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See L<http://dev.perl.org/licenses/> for more information.
+
+=cut
+
 1; # End of Run::Parts::Common

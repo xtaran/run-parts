@@ -76,9 +76,11 @@ sub run_parts_command {
 
 Run::Parts, run-parts(8)
 
+
 =head1 AUTHOR
 
 Axel Beckert, C<< <abe@deuxchevaux.org> >>
+
 
 =head1 BUGS
 
@@ -89,39 +91,11 @@ be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
 
-
-
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Run::Parts
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker (report bugs here)
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Run-Parts>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Run-Parts>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Run-Parts>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Run-Parts/>
-
-=back
-
-
-=head1 ACKNOWLEDGEMENTS
+    perldoc Run::Parts::Debian
 
 
 =head1 LICENSE AND COPYRIGHT
@@ -133,7 +107,6 @@ under the terms of either: the GNU General Public License as published
 by the Free Software Foundation; or the Artistic License.
 
 See L<http://dev.perl.org/licenses/> for more information.
-
 
 =cut
 
