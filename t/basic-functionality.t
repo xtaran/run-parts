@@ -2,13 +2,16 @@
 use 5.006;
 use strict;
 use warnings FATAL => 'all';
-use Test::More tests => 18;
+use Test::More tests => 24;
 use Test::Differences;
+use File::Slurp 9999.06;
 
 delete $ENV{PATH};
 
 my $runpartsbin = '/bin/run-parts';
 my $d = 't/basic-dummy';
+my $expected_output = read_file(\*DATA);
+my @expected_output = read_file(\*DATA, { chomp => 1 });
 
 use Run::Parts;
 
@@ -42,6 +45,13 @@ sub run_test_on_rp {
                "$d/bar\n$d/foo\n$d/script\n$d/script2\n",
                "Returns list of files in string context ($desc)");
 
+    # Concatenate files
+    eq_or_diff([$rp->concat], \@expected_output,
+               "Returns concatenated contents of all files in array context ($desc)");
+
+    eq_or_diff(''.$rp->concat, $expected_output,
+               "Returns concatenated contents of all files in string context ($desc)");
+
   SKIP: {
       skip("Listing unix executables on DOS or Windows does not work", 3)
           if ($^O eq 'dos' or $^O eq 'os2' or $^O eq 'MSWin32');
@@ -60,3 +70,13 @@ sub run_test_on_rp {
                  "Returns output of ran executables ($desc)");
     }
 }
+
+__DATA__
+Bar
+Foo
+#!/usr/bin/perl
+
+print "Works\n";
+#!/usr/bin/perl
+
+print "Works, too!\n";

@@ -18,6 +18,7 @@ Version 0.04
 
 our $VERSION = '0.04';
 
+use File::Slurp;
 
 =head1 SYNOPSIS
 
@@ -146,6 +147,40 @@ Runs all relevant executables in the given directory. Equivalent to
 sub run {
     my $self = shift;
     return $self->run_parts_command();
+}
+
+=head2 concat
+
+Returns the concatenated contents of all relevant files in the given
+directory. Equivalent to "cat `run-parts --list`".
+
+=cut
+
+sub concat {
+    my $self = shift;
+    return array_or_string(map { ''.read_file($_) } $self->list());
+}
+
+=head1 INTERNAL FUNCTIONS
+
+=head2 array_or_string
+
+Gets an array as parameter, returns a string with concatenated lines
+or the array depending on the context.
+
+=cut
+
+sub array_or_string {
+    # Sanity check
+    die "array_or_string is no method" if ref $_[0];
+
+    chomp(@_);
+    if (wantarray) {
+        # May come as array of multiline strings
+        return map { split(/\n/, $_) } @_;
+    } else {
+        return join("\n", @_)."\n";
+    }
 }
 
 =head1 SEE ALSO

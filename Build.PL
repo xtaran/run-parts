@@ -21,11 +21,13 @@ my $builder = Module::Build->new(
     test_requires => {
         'Test::More' => 0,
         'Test::Differences' => 0,
+        'File::Slurp' => 9999.06,
     },
     requires => {
         perl => '5.10.0',
         autodie => 0,
         'Taint::Util' => 0,
+        'File::Slurp' => 0,
         #'ABC'              => 1.6,
         #'Foo::Bar::Module' => 5.0401,
     },
