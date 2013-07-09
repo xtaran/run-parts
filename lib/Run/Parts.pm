@@ -158,15 +158,17 @@ directory. Equivalent to "cat `run-parts --list`".
 
 sub concat {
     my $self = shift;
-    return lines(map { ''.read_file($_) } $self->list());
+    return lines(map { read_file($_, { chomp => 1 }) } $self->list());
 }
 
 =head1 INTERNAL FUNCTIONS
 
 =head2 lines
 
-Gets an array as parameter, returns a string with concatenated lines
-or the array depending on the context.
+Gets an array of strings as parameter.
+
+In scalar context returns a string with all lines concatenated. In
+array context it passes through the array.
 
 =cut
 
@@ -174,10 +176,8 @@ sub lines {
     # Sanity check
     die "lines is no method" if ref $_[0];
 
-    chomp(@_);
     if (wantarray) {
-        # May come as array of multiline strings
-        return map { split(/\n/, $_) } @_;
+        return @_
     } else {
         return join("\n", @_)."\n";
     }
