@@ -38,6 +38,21 @@ multiple files in one directory.
 This module is not thought to be used directly and its interface may
 change. See Run::Parts for a stable user interface.
 
+=head1 FILE NAME CONSTRAINTS
+
+On unix-ish operating systems, the file name (but not the path) must
+match ^[-A-Za-z0-9_]+$, i.e. may not contain a dot.
+
+On dos-ish operating systems, the file name without suffix must match
+^[-A-Za-z0-9_]+$, i.e. may not contain a dot. The suffix may contain
+alphanumeric characters and is not mandatory. The full regular
+expression the file name including the suffix must match is
+^[-A-Za-z0-9_]+(\.[A-Za-z0-9]+)?$.
+
+Debian's run-parts tool also offers to use alternative regular
+expressions as file name constraints. This is not yet implemented in
+Run::Parts::Perl.
+
 =cut
 
 # On DOS and Windows, run-parts' regular expressions are not really
