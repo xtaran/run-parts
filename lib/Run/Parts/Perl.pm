@@ -20,11 +20,6 @@ Version 0.01
 
 our $VERSION = '0.02';
 
-# On DOS and Windows, run-parts' regular expressions are not really
-# applicable. Allow an arbitrary alphanumerical suffix there.
-my $win_suffix = dosish() ? qr/\.[a-z0-9]+/i : qr'';
-my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
-
 =head1 SYNOPSIS
 
 Pure Perl reimplementation of basic functionality of Debian's run-parts tool.
@@ -42,6 +37,13 @@ multiple files in one directory.
 
 This module is not thought to be used directly and its interface may
 change. See Run::Parts for a stable user interface.
+
+=cut
+
+# On DOS and Windows, run-parts' regular expressions are not really
+# applicable. Allow an arbitrary alphanumerical suffix there.
+my $win_suffix = dosish() ? qr/\.[a-z0-9]+/i : qr'';
+my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
 
 =head1 METHODS
 
