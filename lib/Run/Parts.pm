@@ -12,11 +12,11 @@ Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -24,8 +24,9 @@ our $VERSION = '0.03';
 Run::Parts offers functionality of Debian's run-parts tool in Perl.
 
 run-parts runs all the executable files named within constraints
-described below, found in the given directory.  Other files and
-directories are silently ignored.
+described in L<run-parts(8)> and L<Run::Parts::Perl>, found
+in the given directory.  Other files and directories are silently
+ignored.
 
 Additionally it can just print the names of the all matching files
 (not limited to executables, but ignores blacklisted files like
