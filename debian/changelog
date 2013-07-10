@@ -1,3 +1,14 @@
+librun-parts-perl (0.04-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add new (build-) dependencies:
+    + libexporter-easy-perl
+    + libfile-slurp-perl
+    + libmodern-perl-perl
+    + libtest-nowarnings-perl (build-dependency only)
+
+ -- Axel Beckert <abe@debian.org>  Wed, 10 Jul 2013 20:06:39 +0200
+
 librun-parts-perl (0.03-1) unstable; urgency=low
 
   * Initial Release. (Closes: #714969)

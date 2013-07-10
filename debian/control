@@ -4,8 +4,12 @@ Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
 Build-Depends: debhelper (>= 9),
                libautodie-perl,
+               libexporter-easy-perl,
+               libfile-slurp-perl,
+               libmodern-perl-perl,
                libtaint-util-perl,
                libtest-differences-perl,
+               libtest-nowarnings-perl,
                perl
 Standards-Version: 3.9.4
 Homepage: http://metacpan.org/release/Run-Parts/
@@ -15,6 +19,9 @@ Vcs-Git: git://github.com/xtaran/run-parts.git -b debian
 Package: librun-parts-perl
 Architecture: all
 Depends: libautodie-perl,
+         libexporter-easy-perl,
+         libfile-slurp-perl,
+         libmodern-perl-perl,
          libtaint-util-perl,
          ${misc:Depends},
          ${perl:Depends}
