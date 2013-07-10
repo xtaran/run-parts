@@ -1,8 +1,7 @@
 #!perl -T
 use Modern::Perl;
-use Test::More;
-
-plan tests => 1;
+use Test::More tests => 2;
+use Test::NoWarnings;
 
 BEGIN {
     use_ok( 'Run::Parts' ) || print "Bail out!\n";

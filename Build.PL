@@ -20,6 +20,7 @@ my $builder = Module::Build->new(
     test_requires => {
         'Test::More' => 0,
         'Test::Differences' => 0,
+        'Test::NoWarnings' => 0,
         'File::Slurp' => 9999.06,
     },
     requires => {

@@ -1,6 +1,7 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 24;
+use Test::More tests => 25;
+use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
 
