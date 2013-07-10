@@ -22,7 +22,6 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'Test::Differences' => 0,
         'File::Slurp' => 9999.06,
-        'Exporter::Easy' => 0,
     },
     requires => {
         perl => '5.10.0',
