@@ -1,8 +1,6 @@
 package Run::Parts::Perl;
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use autodie;
 use Taint::Util;
 use Run::Parts::Common;

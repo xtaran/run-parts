@@ -1,7 +1,5 @@
 #!perl -T
-use 5.006;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Test::More tests => 24;
 use Test::Differences;
 use File::Slurp 9999.06;

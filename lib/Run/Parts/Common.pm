@@ -1,8 +1,6 @@
 package Run::Parts::Common;
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Exporter::Easy ( EXPORT => [qw[lines chomped_lines]] );
 use Scalar::Util qw(blessed);
 

@@ -1,7 +1,5 @@
 #!perl -T
-use 5.006;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Test::More;
 
 plan tests => 1;

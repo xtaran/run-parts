@@ -1,8 +1,6 @@
 package Run::Parts::Debian;
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Run::Parts::Common;
 
 =encoding utf8

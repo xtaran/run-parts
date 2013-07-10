@@ -1,6 +1,4 @@
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Module::Build;
 
 my $builder = Module::Build->new(
@@ -17,6 +15,7 @@ my $builder = Module::Build->new(
     },
     configure_requires => {
         'Module::Build' => '0.37',
+        'Modern::Perl' => 0,
     },
     test_requires => {
         'Test::More' => 0,
