@@ -14,19 +14,17 @@
    },
    "name" : "Run-Parts",
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Test::Differences" : "0",
-            "Test::More" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
+            "Modern::Perl" : "0",
             "Module::Build" : "0.37"
          }
       },
       "runtime" : {
          "requires" : {
+            "Exporter::Easy" : "0",
+            "File::Slurp" : "0",
+            "Scalar::Util" : "0",
             "Taint::Util" : "0",
             "autodie" : "0",
             "perl" : "v5.10.0"
@@ -36,7 +34,11 @@
    "provides" : {
       "Run::Parts" : {
          "file" : "lib/Run/Parts.pm",
-         "version" : "0.03"
+         "version" : "0.04"
+      },
+      "Run::Parts::Common" : {
+         "file" : "lib/Run/Parts/Common.pm",
+         "version" : "0.01"
       },
       "Run::Parts::Debian" : {
          "file" : "lib/Run/Parts/Debian.pm",
@@ -44,14 +46,26 @@
       },
       "Run::Parts::Perl" : {
          "file" : "lib/Run/Parts/Perl.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://rt.cpan.org/Dist/Display.html?Name=Run-Parts"
+      },
       "license" : [
          "http://dev.perl.org/licenses/"
-      ]
+      ],
+      "repository" : {
+         "url" : "https://github.com/xtaran/run-parts"
+      }
    },
-   "version" : "0.03"
+   "version" : "0.04",
+   "x_test_requires" : {
+      "File::Slurp" : "9999.06",
+      "Test::Differences" : "0",
+      "Test::More" : "0",
+      "Test::NoWarnings" : "0"
+   }
 }

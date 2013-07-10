@@ -1,10 +1,9 @@
 package Run::Parts::Perl;
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use autodie;
 use Taint::Util;
+use Run::Parts::Common;
 
 =encoding utf8
 
@@ -14,12 +13,11 @@ Run::Parts::Perl - Pure Perl implementation of Debian's run-parts tool
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
-
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -38,6 +36,28 @@ multiple files in one directory.
 
 This module is not thought to be used directly and its interface may
 change. See Run::Parts for a stable user interface.
+
+=head1 FILE NAME CONSTRAINTS
+
+On unix-ish operating systems, the file name (but not the path) must
+match ^[-A-Za-z0-9_]+$, i.e. may not contain a dot.
+
+On dos-ish operating systems, the file name without suffix must match
+^[-A-Za-z0-9_]+$, i.e. may not contain a dot. The suffix may contain
+alphanumeric characters and is not mandatory. The full regular
+expression the file name including the suffix must match is
+^[-A-Za-z0-9_]+(\.[A-Za-z0-9]+)?$.
+
+Debian's run-parts tool also offers to use alternative regular
+expressions as file name constraints. This is not yet implemented in
+Run::Parts::Perl.
+
+=cut
+
+# On DOS and Windows, run-parts' regular expressions are not really
+# applicable. Allow an arbitrary alphanumerical suffix there.
+my $win_suffix = dosish() ? qr/\.[a-z0-9]+/i : qr'';
+my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
 
 =head1 METHODS
 
@@ -68,7 +88,7 @@ sub run_parts_command {
 
     my @result = $self->$rp_cmd(@_);
 
-    return wantarray ? @result : join("\n", @result)."\n";
+    return lines(@result);
 }
 
 =head2 list
@@ -90,7 +110,7 @@ sub list {
             $_;
         }
     } grep {
-        /^[-A-Za-z0-9_]+$/
+        /$file_re/
     } readdir($dh);
 }
 
@@ -121,19 +141,35 @@ sub run {
 
     return map {
         untaint($_);
+        s(/)(\\)g if dosish();
         my $output = `$_`;
         chomp($output);
         $output;
     } $self->test($dir);
 }
 
+=head1 INTERNAL FUNCTIONS
+
+=head2 dosish
+
+Returns true if ran on a dos-ish platform, i.e. MS-DOS, Windows or
+OS/2.
+
+=cut
+
+sub dosish {
+    return $^O =~ /^(dos|os2|MSWin32)$/;
+}
+
 =head1 SEE ALSO
 
 Run::Parts, run-parts(8)
 
+
 =head1 AUTHOR
 
 Axel Beckert, C<< <abe@deuxchevaux.org> >>
+
 
 =head1 BUGS
 
@@ -144,39 +180,11 @@ be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
 
-
-
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Run::Parts
-
-
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker (report bugs here)
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Run-Parts>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Run-Parts>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Run-Parts>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Run-Parts/>
-
-=back
-
-
-=head1 ACKNOWLEDGEMENTS
+    perldoc Run::Parts::Perl
 
 
 =head1 LICENSE AND COPYRIGHT
@@ -188,7 +196,6 @@ under the terms of either: the GNU General Public License as published
 by the Free Software Foundation; or the Artistic License.
 
 See L<http://dev.perl.org/licenses/> for more information.
-
 
 =cut
 

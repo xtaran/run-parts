@@ -1,8 +1,6 @@
 package Run::Parts;
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 
 =encoding utf8
 
@@ -12,20 +10,23 @@ Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
+use File::Slurp;
+use Run::Parts::Common;
 
 =head1 SYNOPSIS
 
 Run::Parts offers functionality of Debian's run-parts tool in Perl.
 
 run-parts runs all the executable files named within constraints
-described below, found in the given directory.  Other files and
-directories are silently ignored.
+described in L<run-parts(8)> and L<Run::Parts::Perl>, found
+in the given directory.  Other files and directories are silently
+ignored.
 
 Additionally it can just print the names of the all matching files
 (not limited to executables, but ignores blacklisted files like
@@ -145,6 +146,18 @@ Runs all relevant executables in the given directory. Equivalent to
 sub run {
     my $self = shift;
     return $self->run_parts_command();
+}
+
+=head2 concat
+
+Returns the concatenated contents of all relevant files in the given
+directory. Equivalent to "cat `run-parts --list`".
+
+=cut
+
+sub concat {
+    my $self = shift;
+    return lines(map { read_file($_, { chomp => 1 }) } $self->list());
 }
 
 =head1 SEE ALSO
