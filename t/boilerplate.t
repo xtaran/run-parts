@@ -1,10 +1,6 @@
 #!perl -T
-use 5.006;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use Test::More;
-
-plan tests => 3;
 
 sub not_in_file_ok {
     my ($filename, %regex) = @_;
@@ -38,20 +34,17 @@ sub module_boilerplate_ok {
     );
 }
 
-TODO: {
-  local $TODO = "Need to replace the boilerplate text";
-
-  not_in_file_ok(README =>
+not_in_file_ok(README =>
     "The README is used..."       => qr/The README is used/,
     "'version information here'"  => qr/to provide version information/,
-  );
+    );
 
-  not_in_file_ok(Changes =>
+not_in_file_ok(Changes =>
     "placeholder date/time"       => qr(Date/time)
-  );
+    );
 
-  module_boilerplate_ok('lib/Run/Parts.pm');
-
-
+foreach my $pm (<lib/Run/*.pm>, <lib/Run/Parts/*.pm>) {
+    module_boilerplate_ok($pm);
 }
 
+done_testing();

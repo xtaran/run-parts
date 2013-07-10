@@ -1,10 +1,7 @@
 #!perl -T
-use 5.006;
-use strict;
-use warnings FATAL => 'all';
-use Test::More;
-
-plan tests => 1;
+use Modern::Perl;
+use Test::More tests => 2;
+use Test::NoWarnings;
 
 BEGIN {
     use_ok( 'Run::Parts' ) || print "Bail out!\n";
