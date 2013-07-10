@@ -29,6 +29,7 @@ my $builder = Module::Build->new(
         'Taint::Util' => 0,
         'File::Slurp' => 0,
         'Exporter::Easy' => 0,
+        'Scalar::Util' => 0,
     },
     add_to_cleanup     => [ 'Run-Parts-*' ],
 );

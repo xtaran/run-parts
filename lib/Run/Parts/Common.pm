@@ -4,6 +4,7 @@ use 5.010;
 use strict;
 use warnings FATAL => 'all';
 use Exporter::Easy ( EXPORT => [qw[lines chomped_lines]] );
+use Scalar::Util qw(blessed);
 
 =encoding utf8
 
@@ -36,7 +37,7 @@ array context it passes through the array.
 
 sub lines {
     # Sanity check
-    die "lines is no method" if ref $_[0];
+    die "lines is no method" if blessed $_[0];
 
     return wantarray ? @_ : join("\n", @_)."\n";
 }
@@ -52,7 +53,7 @@ array context it passes through the array.
 
 sub chomped_lines {
     # Sanity check
-    die "chomped_lines is no method" if ref $_[0];
+    die "chomped_lines is no method" if blessed $_[0];
 
     chomp(@_);
     return lines(@_);
