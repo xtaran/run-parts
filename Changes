@@ -1,5 +1,9 @@
 Revision history for Run-Parts
 
+0.05    TODO
+
+        Fix test skipping numbers in t/basic-functionality.t.
+
 0.04    Wed Jul 10 19:55:57 CEST 2013
 
         New method concat.

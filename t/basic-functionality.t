@@ -16,7 +16,7 @@ use Run::Parts;
 
 # Testing the Debian backend
 SKIP: {
-    skip("$runpartsbin not found or not executable", 6)
+    skip("$runpartsbin not found or not executable", 8)
         unless -x $runpartsbin;
     run_test_on_rp($d, 'debian')
 }
