@@ -1,6 +1,6 @@
 Revision history for Run-Parts
 
-0.05    TODO
+0.05    Sun 21 Jul 17:56:01 CEST 2013
 
         Fix test skipping numbers in t/basic-functionality.t.
 
