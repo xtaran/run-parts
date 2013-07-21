@@ -4,6 +4,8 @@ Revision history for Run-Parts
 
         Fix test skipping numbers in t/basic-functionality.t.
 
+        Documentation deduplication.
+
 0.04    Wed Jul 10 19:55:57 CEST 2013
 
         New method concat.

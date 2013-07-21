@@ -1,6 +1,7 @@
 Makefile.old
 Build
 Build.bat
+README
 META.*
 MYMETA.*
 .build/

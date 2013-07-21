@@ -7,6 +7,7 @@ my $builder = Module::Build->new(
     dist_author         => q{Axel Beckert <abe@deuxchevaux.org>},
     dist_version_from   => 'lib/Run/Parts.pm',
     release_status      => 'stable',
+    create_readme       => 1,
     meta_merge => {
         resources => {
             repository => 'https://github.com/xtaran/run-parts',
@@ -31,7 +32,13 @@ my $builder = Module::Build->new(
         'Exporter::Easy' => 0,
         'Scalar::Util' => 0,
     },
-    add_to_cleanup     => [ 'Run-Parts-*' ],
+    develop_requires => {
+        'Pod::Readme' => 0,
+    },
+    add_to_cleanup     => [
+        'Run-Parts-*',
+        'README',
+    ],
 );
 
 $builder->create_build_script();
