@@ -245,9 +245,6 @@ L<http://search.cpan.org/dist/Run-Parts/>
 =back
 
 
-=head1 ACKNOWLEDGEMENTS
-
-
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2013 Axel Beckert.
