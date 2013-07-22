@@ -15,7 +15,7 @@ my $builder = Module::Build->new(
         }
     },
     configure_requires => {
-        'Module::Build' => '0.37',
+        'Module::Build' => '0.4004',
         'Modern::Perl' => 0,
     },
     test_requires => {
