@@ -5,7 +5,7 @@ use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
 
-delete $ENV{PATH};
+delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
 my $runpartsbin = '/bin/run-parts';
 my $d = 't/basic-dummy';

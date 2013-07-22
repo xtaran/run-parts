@@ -9,7 +9,7 @@ if ($^O ne 'dos' and $^O ne 'os2' and $^O ne 'MSWin32' ) {
     plan tests => 10;
 }
 
-delete $ENV{PATH};
+delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
 my $d = 't/win-dummy';
 my @files = qw[bar.com bla.bat foo.exe pfff.scr puff.pif unix.sh];
