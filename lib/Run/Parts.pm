@@ -16,7 +16,7 @@ Version 0.06
 
 our $VERSION = '0.06';
 
-use File::Slurp;
+use File::Slurp 9999.17;
 use Run::Parts::Common;
 
 =head1 SYNOPSIS
