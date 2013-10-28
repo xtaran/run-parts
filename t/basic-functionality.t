@@ -5,7 +5,7 @@ use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
 
-delete $ENV{PATH};
+delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
 my $runpartsbin = '/bin/run-parts';
 my $d = 't/basic-dummy';
@@ -16,7 +16,7 @@ use Run::Parts;
 
 # Testing the Debian backend
 SKIP: {
-    skip("$runpartsbin not found or not executable", 6)
+    skip("$runpartsbin not found or not executable", 8)
         unless -x $runpartsbin;
     run_test_on_rp($d, 'debian')
 }
