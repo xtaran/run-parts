@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 9),
                libtest-differences-perl,
                libtest-nowarnings-perl,
                perl
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://metacpan.org/release/Run-Parts/
 Vcs-Browser: https://github.com/xtaran/run-parts
 Vcs-Git: git://github.com/xtaran/run-parts.git -b debian
