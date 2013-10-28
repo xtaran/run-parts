@@ -1,11 +1,11 @@
-librun-parts-perl (0.06-1) UNRELEASED; urgency=low
+librun-parts-perl (0.06-1) unstable; urgency=low
 
-  * New upstream release (non-functional changes only)
+  * New upstream release (docs, build-system and test-suite changes only)
     + Add versioned build-dependency on libmodule-build-perl >= 0.400400
       since 0.4003 as shipped with Perl 5.18.1 does not suffice.
   * Bump Standards-Version to 3.9.5 (no changes)
 
- -- Axel Beckert <abe@debian.org>  Mon, 28 Oct 2013 14:57:03 +0100
+ -- Axel Beckert <abe@debian.org>  Mon, 28 Oct 2013 20:13:09 +0100
 
 librun-parts-perl (0.04-1) unstable; urgency=low
 
