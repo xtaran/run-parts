@@ -10,11 +10,11 @@ Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.06
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.06';
 
 use File::Slurp;
 use Run::Parts::Common;
@@ -33,7 +33,16 @@ Additionally it can just print the names of the all matching files
 e.g. backup files), but don't actually run them.
 
 This is useful when functionality or configuration is split over
-multiple files in one directory.
+multiple files in one directory. A typical convention is that the
+directory name ends in ".d". Common examples for such splittet
+configuration directories:
+
+    /etc/cron.d/
+    /etc/apt/apt.conf.d/
+    /etc/apt/sources.list.d/,
+    /etc/aptitude-robot/pkglist.d/
+    /etc/logrotate.d/
+    /etc/rsyslog.d/
 
 Perhaps a little code snippet.
 
@@ -48,6 +57,20 @@ Perhaps a little code snippet.
     my $commands_output  = $rpd->run;
     ...
 
+=begin readme
+
+=head1 INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+=end readme
+
+
 =head1 BACKENDS
 
 Run::Parts contains two backend implementation. Run::Parts::Debian
@@ -60,6 +83,9 @@ shell-script based reimplementation of Debian's run-parts.
 By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
 exists, Run::Parts::Perl otherwise. But you can also choose any of the
 backends explicitly.
+
+
+=for readme stop
 
 =head1 METHODS
 
@@ -160,6 +186,8 @@ sub concat {
     return lines(map { read_file($_, { chomp => 1 }) } $self->list());
 }
 
+=for readme continue
+
 =head1 SEE ALSO
 
 run-parts(8), Run::Parts::Debian, Run::Parts::Perl
@@ -177,9 +205,15 @@ be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
 
+=head1 CODE
+
+You can find a git repository of Run::Parts' code at
+L<https://github.com/xtaran/run-parts>.
 
 
 =head1 SUPPORT
+
+=begin readme
 
 You can find documentation for this module with the perldoc command.
 
@@ -187,6 +221,8 @@ You can find documentation for this module with the perldoc command.
 
 
 You can also look for information at:
+
+=end readme
 
 =over 4
 
@@ -207,9 +243,6 @@ L<http://cpanratings.perl.org/d/Run-Parts>
 L<http://search.cpan.org/dist/Run-Parts/>
 
 =back
-
-
-=head1 ACKNOWLEDGEMENTS
 
 
 =head1 LICENSE AND COPYRIGHT

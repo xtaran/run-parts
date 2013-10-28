@@ -17,7 +17,7 @@
       "configure" : {
          "requires" : {
             "Modern::Perl" : "0",
-            "Module::Build" : "0.37"
+            "Module::Build" : "0.4004"
          }
       },
       "runtime" : {
@@ -34,7 +34,7 @@
    "provides" : {
       "Run::Parts" : {
          "file" : "lib/Run/Parts.pm",
-         "version" : "0.04"
+         "version" : "0.06"
       },
       "Run::Parts::Common" : {
          "file" : "lib/Run/Parts/Common.pm",
@@ -61,7 +61,7 @@
          "url" : "https://github.com/xtaran/run-parts"
       }
    },
-   "version" : "0.04",
+   "version" : "0.06",
    "x_test_requires" : {
       "File::Slurp" : "9999.06",
       "Test::Differences" : "0",

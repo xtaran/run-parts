@@ -3,7 +3,7 @@ use Modern::Perl;
 use Test::More;
 use Test::Differences;
 
-delete $ENV{PATH};
+delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
 my $runpartsbin = '/bin/run-parts';
 unless (-x $runpartsbin) {
