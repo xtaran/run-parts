@@ -22,6 +22,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'Test::Differences' => 0,
         'Test::NoWarnings' => 0,
+        'Test::CPAN::Changes' => 0.23,
     },
     requires => {
         perl => '5.10.1',

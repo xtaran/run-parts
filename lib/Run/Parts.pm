@@ -10,11 +10,11 @@ Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use File::Slurp 9999.17;
 use Run::Parts::Common;
