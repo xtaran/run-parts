@@ -1,3 +1,9 @@
+librun-parts-perl (0.06-2) UNRELEASED; urgency=low
+
+  * Remove trailing slash from metacpan.org URLs, use HTTPS.
+
+ -- Axel Beckert <abe@debian.org>  Tue, 17 Dec 2013 22:49:13 +0100
+
 librun-parts-perl (0.06-1) unstable; urgency=low
 
   * New upstream release (docs, build-system and test-suite changes only)

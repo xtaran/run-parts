@@ -1,2 +1,2 @@
 version=3
-https://metacpan.org/release/Run-Parts/   .*/Run-Parts-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$
+https://metacpan.org/release/Run-Parts   .*/Run-Parts-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$
