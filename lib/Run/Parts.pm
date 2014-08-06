@@ -34,7 +34,7 @@ e.g. backup files), but don't actually run them.
 
 This is useful when functionality or configuration is split over
 multiple files in one directory. A typical convention is that the
-directory name ends in ".d". Common examples for such splittet
+directory name ends in ".d". Common examples for such splitted
 configuration directories:
 
     /etc/cron.d/
@@ -73,7 +73,7 @@ To install this module, run the following commands:
 
 =head1 BACKENDS
 
-Run::Parts contains two backend implementation. Run::Parts::Debian
+Run::Parts contains two backend implementations. Run::Parts::Debian
 actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
 implementation of a basic set of run-parts' functionality.
 
