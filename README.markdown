@@ -1,8 +1,8 @@
 Run::Parts — run-parts in Perl
 ==============================
 
-The Perl module `Run::Parts` offers the functionality of Debian's
-`run-parts` tool in Perl.
+The [Perl module `Run::Parts`](https://metacpan.org/release/Run-Parts)
+offers the functionality of Debian's `run-parts` tool in Perl.
 
 `Run::Parts` runs all the executable files named within constraints
 described in `run-parts(8)` and `Run::Parts::Perl`, found in the given
