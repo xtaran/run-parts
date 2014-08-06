@@ -21,9 +21,10 @@ our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
-Pure Perl reimplementation of basic functionality of Debian's run-parts tool.
+Pure Perl reimplementation of basic functionality of Debian's
+L<run-parts(8)> tool.
 
-run-parts runs all the executable files named within constraints
+L<run-parts(8)> runs all the executable files named within constraints
 described below, found in the given directory.  Other files and
 directories are silently ignored.
 
@@ -35,7 +36,7 @@ This is useful when functionality or configuration is split over
 multiple files in one directory.
 
 This module is not thought to be used directly and its interface may
-change. See Run::Parts for a stable user interface.
+change. See L<Run::Parts> for a stable user interface.
 
 =head1 FILE NAME CONSTRAINTS
 
@@ -48,9 +49,9 @@ alphanumeric characters and is not mandatory. The full regular
 expression the file name including the suffix must match is
 ^[-A-Za-z0-9_]+(\.[A-Za-z0-9]+)?$.
 
-Debian's run-parts tool also offers to use alternative regular
+Debian's L<run-parts(8)> tool also offers to use alternative regular
 expressions as file name constraints. This is not yet implemented in
-Run::Parts::Perl.
+L<Run::Parts::Perl>.
 
 =cut
 
@@ -63,8 +64,8 @@ my $file_re = qr/^[-A-Za-z0-9_]+($win_suffix)?$/;
 
 =head2 new (Constructor)
 
-Creates a new Run::Parts object. Takes one parameter, the directory on
-which run-parts should work.
+Creates a new L<Run::Parts> object. Takes one parameter, the directory
+on which run-parts should work.
 
 =cut
 
@@ -163,7 +164,7 @@ sub dosish {
 
 =head1 SEE ALSO
 
-Run::Parts, run-parts(8)
+L<Run::Parts>, L<run-parts(8)>
 
 
 =head1 AUTHOR

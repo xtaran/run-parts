@@ -20,10 +20,10 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Perl interface to Debian's run-parts tool. run-parts runs all the
-executable files named within constraints described below, found in
-the given directory.  Other files and directories are silently
-ignored.
+Perl interface to Debian's L<run-parts(8)> tool. L<run-parts(8)> runs
+all the executable files named within constraints described below,
+found in the given directory.  Other files and directories are
+silently ignored.
 
 Additionally it can just print the names of the all matching files
 (not limited to executables, but ignores blacklisted files like
@@ -33,13 +33,13 @@ This is useful when functionality or configuration is split over
 multiple files in one directory.
 
 This module is not thought to be used directly and its interface may
-change. See Run::Parts for a stable user interface.
+change. See L<Run::Parts> for a stable user interface.
 
 =head1 METHODS
 
 =head2 new (Constructor)
 
-Creates a new Run::Parts object. Takes one parameter, the directory on
+Creates a new L<Run::Parts> object. Takes one parameter, the directory on
 which run-parts should work.
 
 =cut
@@ -54,7 +54,8 @@ sub new {
 
 =head2 run_parts_command
 
-Returns the run-parts to run with the given command parameter
+Returns the L<run-parts(8)> command to run with the given command
+parameter
 
 =cut
 
@@ -72,7 +73,7 @@ sub run_parts_command {
 
 =head1 SEE ALSO
 
-Run::Parts, run-parts(8)
+L<Run::Parts>, L<run-parts(8)>
 
 
 =head1 AUTHOR

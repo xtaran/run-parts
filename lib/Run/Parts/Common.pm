@@ -20,7 +20,7 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Exports helper functions used by Run::Parts as well as its backends.
+Exports helper functions used by L<Run::Parts> as well as its backends.
 
 =head1 EXPORTED FUNCTIONS
 
@@ -61,7 +61,7 @@ sub chomped_lines {
 
 =head1 SEE ALSO
 
-Run::Parts
+L<Run::Parts>
 
 
 =head1 AUTHOR

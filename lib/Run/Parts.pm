@@ -21,7 +21,8 @@ use Run::Parts::Common;
 
 =head1 SYNOPSIS
 
-Run::Parts offers functionality of Debian's run-parts tool in Perl.
+Run::Parts offers functionality of Debian's L<run-parts(8)> tool in
+Perl.
 
 run-parts runs all the executable files named within constraints
 described in L<run-parts(8)> and L<Run::Parts::Perl>, found
@@ -73,16 +74,17 @@ To install this module, run the following commands:
 
 =head1 BACKENDS
 
-Run::Parts contains two backend implementations. Run::Parts::Debian
-actually uses /bin/run-parts and Run::Parts::Perl is a pure Perl
-implementation of a basic set of run-parts' functionality.
+L<Run::Parts> contains two backend implementations.
+L<Run::Parts::Debian> actually uses /bin/run-parts and
+L<Run::Parts::Perl> is a pure Perl implementation of a basic set of
+L<run-parts(8)>' functionality.
 
-Run::Parts::Debian may or may not work with RedHat's simplified
-shell-script based reimplementation of Debian's run-parts.
+L<Run::Parts::Debian> may or may not work with RedHat's simplified
+shell-script based reimplementation of Debian's L<run-parts(8)>.
 
-By default Run::Parts uses Run::Parts::Debian if /bin/run-parts
-exists, Run::Parts::Perl otherwise. But you can also choose any of the
-backends explicitly.
+By default L<Run::Parts> uses L<Run::Parts::Debian> if /bin/run-parts
+exists, L<Run::Parts::Perl> otherwise. But you can also choose any of
+the backends explicitly.
 
 
 =for readme stop
@@ -91,8 +93,8 @@ backends explicitly.
 
 =head2 new (Constructor)
 
-Creates a new Run::Parts object. Takes one parameter, the directory on
-which run-parts should work.
+Creates a new L<Run::Parts> object. Takes one parameter, the directory
+on which run-parts should work.
 
 =cut
 
@@ -129,7 +131,8 @@ sub new {
 
 =head2 run_parts_command
 
-Returns the run-parts to run with the given command parameter
+Returns the L<run-parts(8)> command to run with the given command
+parameter.
 
 =cut
 
@@ -190,7 +193,7 @@ sub concat {
 
 =head1 SEE ALSO
 
-run-parts(8), Run::Parts::Debian, Run::Parts::Perl
+L<run-parts(8)>, L<Run::Parts::Debian>, L<Run::Parts::Perl>
 
 =head1 AUTHOR
 
