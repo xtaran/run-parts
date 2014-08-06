@@ -1,23 +1,13 @@
 package Run::Parts;
 
+# ABSTRACT: Offers functionality of Debian's run-parts tool in Perl
+
 use Modern::Perl;
-
-=encoding utf8
-
-=head1 NAME
-
-Run::Parts - Offers functionality of Debian's run-parts tool in Perl.
-
-=head1 VERSION
-
-Version 0.07
-
-=cut
-
-our $VERSION = '0.07';
 
 use File::Slurp 9999.17;
 use Run::Parts::Common;
+
+=encoding utf8
 
 =head1 SYNOPSIS
 
@@ -195,10 +185,6 @@ sub concat {
 
 L<run-parts(8)>, L<Run::Parts::Debian>, L<Run::Parts::Perl>
 
-=head1 AUTHOR
-
-Axel Beckert, C<< <abe@deuxchevaux.org> >>
-
 =head1 BUGS
 
 Please report any bugs or feature requests to C<bug-run-parts at
@@ -246,20 +232,6 @@ L<http://cpanratings.perl.org/d/Run-Parts>
 L<http://search.cpan.org/dist/Run-Parts/>
 
 =back
-
-
-=head1 LICENSE AND COPYRIGHT
-
-Copyright 2013-2014 Axel Beckert.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation, either version 1 or (at your option)
-any later version; or the Artistic License.
-
-See L<http://dev.perl.org/licenses/> for more information.
-
-
 =cut
 
 1; # End of Run::Parts
