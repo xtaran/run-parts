@@ -131,9 +131,10 @@ sub run {
     my $dir = $self->{dir};
 
     return map {
-        untaint($_);
-        s(/)(\\)g if dosish();
-        my $output = `$_`;
+        my $command = $_;
+        untaint($command);
+        $command =~ s(/)(\\)g if dosish();
+        my $output = `$command`;
         chomp($output);
         $output;
     } $self->test($dir);
