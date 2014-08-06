@@ -109,4 +109,4 @@ See L<http://dev.perl.org/licenses/> for more information.
 
 =cut
 
-1; # End of Run::Parts
+1; # End of Run::Parts::Debian
