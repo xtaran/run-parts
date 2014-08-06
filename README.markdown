@@ -1,5 +1,5 @@
-Run::Parts - The functionality of Debian's run-parts tool in Perl
-=================================================================
+Run::Parts — run-parts in Perl
+==============================
 
 The Perl module `Run::Parts` offers the functionality of Debian's
 `run-parts` tool in Perl.
@@ -17,12 +17,12 @@ multiple files in one directory. A typical convention is that
 the directory name ends in ".d". Common examples for such
 splitted configuration directories:
 
-  /etc/cron.d/
-  /etc/apt/apt.conf.d/
-  /etc/apt/sources.list.d/,
-  /etc/aptitude-robot/pkglist.d/
-  /etc/logrotate.d/
-  /etc/rsyslog.d/
+    /etc/cron.d/
+    /etc/apt/apt.conf.d/
+    /etc/apt/sources.list.d/,
+    /etc/aptitude-robot/pkglist.d/
+    /etc/logrotate.d/
+    /etc/rsyslog.d/
 
 Example Code
 ------------
