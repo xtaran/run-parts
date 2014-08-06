@@ -37,7 +37,7 @@ my $rpd = Run::Parts->new('directory', 'debian'); # uses /bin/run-parts
 my @file_list        = $rp->list;
 my @executables_list = $rpp->test;
 my $commands_output  = $rpd->run;
-…
+...
 ```
 
 Backends
