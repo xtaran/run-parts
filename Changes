@@ -16,6 +16,8 @@ Revision history for Run-Parts
         Consider Modern::Perl as ok for
         Perl::Critic::Policy::TestingAndDebugging::RequireUseStrict
 
+        Use Travis CI for smoke testing
+
 0.06    2013-07-22 20:47:16+02:00
 
         Bump Module::Build requirement to 0.4004 for test_requires.

@@ -1,6 +1,8 @@
 Run::Parts — run-parts in Perl
 ==============================
 
+![Travis CI Build Status](https://travis-ci.org/xtaran/run-parts.svg)
+
 The [Perl module `Run::Parts`](https://metacpan.org/release/Run-Parts)
 offers the functionality of Debian's `run-parts` tool in Perl.
 
