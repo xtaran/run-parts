@@ -18,3 +18,8 @@ install:
 
 script:
    - dzil smoke --release --author
+
+notifications:
+  irc:
+    channels:
+      - "irc.lugs.ch#kivamon"
