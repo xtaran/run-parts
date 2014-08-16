@@ -20,6 +20,4 @@ script:
    - dzil smoke --release --author
 
 notifications:
-  irc:
-    channels:
-      - "irc.lugs.ch#kivamon"
+  irc: "irc.lugs.ch#kivamon"
