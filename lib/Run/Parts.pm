@@ -27,7 +27,7 @@ e.g. backup files), but don't actually run them.
 
 This is useful when functionality or configuration is split over
 multiple files in one directory. A typical convention is that the
-directory name ends in ".d". Common examples for such splitted
+directory name ends in ".d". Common examples for such split
 configuration directories:
 
     /etc/cron.d/
