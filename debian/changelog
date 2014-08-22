@@ -5,6 +5,8 @@ librun-parts-perl (0.06-2) UNRELEASED; urgency=low
     + Drop build-dependency on libmodule-build-perl.
   * Make (build-) dependency on libfile-slurp-perl versioned (found by
     dh-dzil-refresh/dh-make-perl refresh)
+  * Move most build-dependencies to Build-Depends-Indep as suggested by
+    dh-dzil-refresh/dh-make-perl refresh.
 
  -- Axel Beckert <abe@debian.org>  Tue, 17 Dec 2013 22:49:13 +0100
 
