@@ -9,14 +9,16 @@ Revision history for Run-Parts
 
         Require CPAN::Changes >= 0.23 for running the test suite.
 
-        Switch to Dist::Zilla (with ExtUtils::MakeMaker) instead of Module::Build
+        Switch to Dist::Zilla (with ExtUtils::MakeMaker) instead of
+        Module::Build. Remove convenience Makefile.
 
         Fix Perl::Critic warning "Don't modify $_ in list functions"
 
         Consider Modern::Perl as ok for
         Perl::Critic::Policy::TestingAndDebugging::RequireUseStrict
 
-        Use Travis CI for smoke testing
+        Use Travis CI for smoke testing and Coveralls.io for coverage
+        reporting.
 
 0.06    2013-07-22 20:47:16+02:00
 
