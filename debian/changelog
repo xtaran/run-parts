@@ -8,6 +8,7 @@ librun-parts-perl (0.06.90-1) UNRELEASED; urgency=low
     dh-dzil-refresh/dh-make-perl refresh)
   * Move most build-dependencies to Build-Depends-Indep as suggested by
     dh-dzil-refresh/dh-make-perl refresh.
+  * Add origtargz target to generate non-CPAN upstream tar-balls from git.
 
  -- Axel Beckert <abe@debian.org>  Fri, 22 Aug 2014 16:42:09 +0200
 
