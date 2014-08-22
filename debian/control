@@ -3,7 +3,12 @@ Section: perl
 Priority: optional
 Maintainer: Axel Beckert <abe@debian.org>
 Build-Depends: debhelper (>= 9),
-               dh-dist-zilla
+               dh-dist-zilla,
+               libdist-zilla-plugin-git-perl,
+               libdist-zilla-plugin-githubmeta-perl,
+               libdist-zilla-plugin-ourpkgversion-perl,
+               libdist-zilla-plugin-podweaver-perl,
+               libdist-zilla-plugin-test-perl-critic-perl
 Build-Depends-Indep: libautodie-perl,
                      libexporter-easy-perl,
                      libfile-slurp-perl (>= 9999.17),
