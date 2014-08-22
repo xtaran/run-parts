@@ -81,9 +81,6 @@ the backends explicitly.
 
 =for readme stop
 
-
-=for readme stop
-
 =head1 METHODS
 
 =head2 new (Constructor)
@@ -237,7 +234,6 @@ L<http://cpanratings.perl.org/d/Run-Parts>
 L<http://search.cpan.org/dist/Run-Parts/>
 
 =back
-
 =cut
 
 1; # End of Run::Parts
