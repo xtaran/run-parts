@@ -1,11 +1,11 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://metacpan.org/release/Run-Parts
 Upstream-Contact: Axel Beckert <abe@deuxchevaux.org>
-Source: http://metacpan.org/release/Run-Parts/
 Upstream-Name: Run-Parts
 
 Files: *
-Copyright: 2013, Axel Beckert <abe@deuxchevaux.org>
-License: GPL-1+ or Artistic
+Copyright: 2013-2014, Axel Beckert <abe@deuxchevaux.org>
+License: Artistic or GPL-1+
 
 License: Artistic
  This program is free software; you can redistribute it and/or modify

@@ -6,22 +6,22 @@ Build-Depends: debhelper (>= 9),
                dh-dist-zilla,
                libautodie-perl,
                libexporter-easy-perl,
-               libfile-slurp-perl,
+               libfile-slurp-perl (>= 9999.17),
                libmodern-perl-perl,
                libtaint-util-perl,
                libtest-differences-perl,
                libtest-nowarnings-perl,
                perl
 Standards-Version: 3.9.5
-Homepage: https://metacpan.org/release/Run-Parts
 Vcs-Browser: https://github.com/xtaran/run-parts
 Vcs-Git: git://github.com/xtaran/run-parts.git -b debian
+Homepage: https://metacpan.org/release/Run-Parts
 
 Package: librun-parts-perl
 Architecture: all
 Depends: libautodie-perl,
          libexporter-easy-perl,
-         libfile-slurp-perl,
+         libfile-slurp-perl (>= 9999.17),
          libmodern-perl-perl,
          libtaint-util-perl,
          ${misc:Depends},
