@@ -236,4 +236,4 @@ L<http://search.cpan.org/dist/Run-Parts/>
 =back
 =cut
 
-1; # End of Run::Parts
+42; # End of Run::Parts

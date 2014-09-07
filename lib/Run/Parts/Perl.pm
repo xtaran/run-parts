@@ -170,4 +170,4 @@ your bug as I make changes.
 
 =cut
 
-1; # End of Run::Parts::Perl
+qr/\.d$/; # End of Run::Parts::Perl
