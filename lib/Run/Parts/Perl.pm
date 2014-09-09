@@ -132,6 +132,7 @@ sub run {
     return map {
         my $command = $_;
         untaint($command);
+        # uncoverable branch true
         $command =~ s(/)(\\)g if dosish();
         my $output = `$command`;
         chomp($output);
