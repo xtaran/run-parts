@@ -1,6 +1,6 @@
 Revision history for Run-Parts
 
-0.07    Not Released
+0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
 
