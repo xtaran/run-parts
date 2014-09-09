@@ -97,11 +97,8 @@ sub list {
 
     opendir(my $dh, $dir);
     my @list = sort map {
-        if (defined($dir) and $dir ne '') {
-            "$dir/$_";
-        } else {
-            $_;
-        }
+        # $dir can neither be '' nor undef, hence no check necessary
+        "$dir/$_";
     } grep {
         /$file_re/
     } readdir($dh);

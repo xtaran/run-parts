@@ -24,6 +24,9 @@ Revision history for Run-Parts
 
         Use "use_ok" instead of "use" in all tests.
 
+        Drop unreachable else clause while listing the directory
+        contents.
+
         Further new tests added:
         + Verify behaviour upon unknown backend parameter.
 
