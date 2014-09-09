@@ -1,6 +1,6 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 25;
+use Test::More tests => 51;
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
@@ -12,26 +12,33 @@ my $d = 't/basic-dummy';
 my $expected_output = read_file(\*DATA);
 my @expected_output = read_file(\*DATA, { chomp => 1 });
 
-use Run::Parts;
+use_ok( 'Run::Parts' );
+use_ok( 'Run::Parts::Perl' );
 
 # Testing the Debian backend
 SKIP: {
     skip("$runpartsbin not found or not executable", 8)
         unless -x $runpartsbin;
-    run_test_on_rp($d, 'debian')
+    run_test_on_rp($d, 'debian');
+    run_test_on_rp($d, 'run-parts');
 }
 
 # Testing the perl backend
 run_test_on_rp($d, 'perl');
+run_test_on_rp($d, 'module');
 
 # Testing the automatically chosen backend
 run_test_on_rp($d);
+
+# Testing the perl backend, passed as reference
+run_test_on_rp($d, Run::Parts::Perl->new);
 
 sub run_test_on_rp {
     my ($d, $desc) = @_;
     my $rp = Run::Parts->new($d, $desc);
 
     $desc ||= 'default';
+    $desc = ref($desc) if ref($desc);
 
     ok($rp, 'Run::Parts->new($desc) returned non-nil');
 

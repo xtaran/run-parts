@@ -1,6 +1,6 @@
 Revision history for Run-Parts
 
-0.07    Not Released
+0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
 
@@ -19,6 +19,20 @@ Revision history for Run-Parts
 
         Use Travis CI for smoke testing and Coveralls.io for coverage
         reporting.
+
+        Fix passing backends as reference. Add test for that.
+
+        Use "use_ok" instead of "use" in all tests.
+
+        Drop unreachable else clause while listing the directory
+        contents.
+
+        Simplify condition in Run::Parts::Debian::run_parts_command.
+
+        Further new tests added:
+        + Verify behaviour upon unknown backend parameter.
+        + Verify that chomped_lines and lines die if called like a method.
+        + Alternative backend names (module=perl, run-parts=debian)
 
 0.06    2013-07-22 20:47:16+02:00
 

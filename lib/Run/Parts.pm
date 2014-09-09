@@ -98,7 +98,7 @@ sub new {
     my $backend = shift;
     if (defined $backend) {
         if (ref $backend) {
-            $self->{backend} = $backend->new($self->{dir});
+            $self->{backend} = ref($backend)->new($self->{dir});
         } elsif ($backend eq 'debian' or $backend eq 'run-parts') {
             use Run::Parts::Debian;
             $self->{backend} = Run::Parts::Debian->new($self->{dir});
@@ -108,12 +108,15 @@ sub new {
         } else {
             warn "Unknown backend $backend in use";
             require $backend;
+            # uncoverable statement
             $self->{backend} = $backend->new($self->{dir});
         }
     } else {
+        # uncoverable branch false
         if (-x '/bin/run-parts') {
             $self->{backend} = Run::Parts::Debian->new($self->{dir});
         } else {
+            # uncoverable statement
             $self->{backend} = Run::Parts::Perl->new($self->{dir});
         }
     }
@@ -236,4 +239,4 @@ L<http://search.cpan.org/dist/Run-Parts/>
 =back
 =cut
 
-1; # End of Run::Parts
+42; # End of Run::Parts

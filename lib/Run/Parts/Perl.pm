@@ -97,11 +97,8 @@ sub list {
 
     opendir(my $dh, $dir);
     my @list = sort map {
-        if (defined($dir) and $dir ne '') {
-            "$dir/$_";
-        } else {
-            $_;
-        }
+        # $dir can neither be '' nor undef, hence no check necessary
+        "$dir/$_";
     } grep {
         /$file_re/
     } readdir($dh);
@@ -135,6 +132,7 @@ sub run {
     return map {
         my $command = $_;
         untaint($command);
+        # uncoverable branch true
         $command =~ s(/)(\\)g if dosish();
         my $output = `$command`;
         chomp($output);
@@ -170,4 +168,4 @@ your bug as I make changes.
 
 =cut
 
-1; # End of Run::Parts::Perl
+qr/\.d$/; # End of Run::Parts::Perl
