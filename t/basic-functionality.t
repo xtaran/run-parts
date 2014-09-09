@@ -1,6 +1,6 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 35;
+use Test::More tests => 51;
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
@@ -19,11 +19,13 @@ use_ok( 'Run::Parts::Perl' );
 SKIP: {
     skip("$runpartsbin not found or not executable", 8)
         unless -x $runpartsbin;
-    run_test_on_rp($d, 'debian')
+    run_test_on_rp($d, 'debian');
+    run_test_on_rp($d, 'run-parts');
 }
 
 # Testing the perl backend
 run_test_on_rp($d, 'perl');
+run_test_on_rp($d, 'module');
 
 # Testing the automatically chosen backend
 run_test_on_rp($d);
