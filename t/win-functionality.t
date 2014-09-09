@@ -6,7 +6,7 @@ use Test::Differences;
 if ($^O ne 'dos' and $^O ne 'os2' and $^O ne 'MSWin32' ) {
     plan skip_all => 'Tests irrelevant on non-dos-ish systems';
 } else {
-    plan tests => 10;
+    plan tests => 11;
 }
 
 delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
@@ -15,7 +15,7 @@ my $d = 't/win-dummy';
 my @files = qw[bar.com bla.bat foo.exe pfff.scr puff.pif unix.sh];
 my @exe_files = qw[bar.com bla.bat foo.exe];
 
-use Run::Parts;
+use_ok( 'Run::Parts' );
 
 # Testing the perl backend
 run_test_on_rp($d, 'perl');

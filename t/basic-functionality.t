@@ -1,6 +1,6 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 33;
+use Test::More tests => 35;
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
@@ -12,8 +12,8 @@ my $d = 't/basic-dummy';
 my $expected_output = read_file(\*DATA);
 my @expected_output = read_file(\*DATA, { chomp => 1 });
 
-use Run::Parts;
-use Run::Parts::Perl;
+use_ok( 'Run::Parts' );
+use_ok( 'Run::Parts::Perl' );
 
 # Testing the Debian backend
 SKIP: {

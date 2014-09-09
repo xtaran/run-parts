@@ -8,7 +8,7 @@ delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
 my $d = 't/basic-dummy';
 
-use Run::Parts;
+use_ok( 'Run::Parts' );
 
 like(warning { eval { Run::Parts->new($d, 'foobar'); }},
      qr/Unknown backend foobar in use/,

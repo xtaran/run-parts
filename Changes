@@ -22,6 +22,8 @@ Revision history for Run-Parts
 
         Fix passing backends as reference. Add test for that.
 
+        Use "use_ok" instead of "use" in all tests.
+
         Further new tests added:
         + Verify behaviour upon unknown backend parameter.
 
