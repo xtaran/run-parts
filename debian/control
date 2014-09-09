@@ -7,10 +7,11 @@ Build-Depends: debhelper (>= 9),
                libexporter-easy-perl,
                libfile-slurp-perl,
                libmodern-perl-perl,
-               libmodule-build-perl (>= 0.400400),
                libtaint-util-perl,
                libtest-differences-perl,
                libtest-nowarnings-perl,
+               libtest-trap-perl,
+               libtest-warnings-perl,
                perl
 Standards-Version: 3.9.5
 Homepage: https://metacpan.org/release/Run-Parts
