@@ -3,7 +3,6 @@ use Modern::Perl;
 use Test::More;
 use Test::Warnings qw(warning);
 use Test::Differences;
-use File::Slurp 9999.06;
 
 delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
 
