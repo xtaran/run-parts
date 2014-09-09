@@ -29,6 +29,7 @@ Revision history for Run-Parts
 
         Further new tests added:
         + Verify behaviour upon unknown backend parameter.
+        + Verify that chomped_lines and lines die if called like a method.
 
 0.06    2013-07-22 20:47:16+02:00
 
