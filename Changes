@@ -27,6 +27,8 @@ Revision history for Run-Parts
         Drop unreachable else clause while listing the directory
         contents.
 
+        Simplify condition in Run::Parts::Debian::run_parts_command.
+
         Further new tests added:
         + Verify behaviour upon unknown backend parameter.
         + Verify that chomped_lines and lines die if called like a method.

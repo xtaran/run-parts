@@ -56,7 +56,7 @@ sub run_parts_command {
 
     my $command =
         "/bin/run-parts " .
-        ((defined($rp_cmd) and $rp_cmd ne '') ? "'--$rp_cmd'" : '') .
+        ($rp_cmd ? "'--$rp_cmd'" : '') .
         " '".$self->{dir}."'";
 
     return chomped_lines(`$command`);
