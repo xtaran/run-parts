@@ -1,0 +1,17 @@
+#!perl -T
+use Modern::Perl;
+use Test::More;
+use Test::Warnings qw(warning);
+use Test::Differences;
+
+delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};
+
+my $d = 't/basic-dummy';
+
+use Run::Parts;
+
+like(warning { eval { Run::Parts->new(''); }},
+     qr/Unknown backend foobar in use/,
+     "Warn's about unknown backends");
+
+done_testing();

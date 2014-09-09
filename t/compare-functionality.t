@@ -11,7 +11,7 @@ unless (-x $runpartsbin) {
     exit 0;
 }
 
-use Run::Parts;
+use_ok( 'Run::Parts' );
 
 my $d = 't/basic-dummy';
 my $rpd = Run::Parts->new($d, 'debian');
