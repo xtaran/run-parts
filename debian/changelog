@@ -1,11 +1,11 @@
-librun-parts-perl (0.07-1) UNRELEASED; urgency=low
+librun-parts-perl (0.07-1) unstable; urgency=low
 
   * New upstream release.
     + Drop build-dependency on libmodule-build-perl.
     + Add new build dependencies on libtest-{trap,warnings}-perl.
   * Remove trailing slash from metacpan.org URLs, use HTTPS.
 
- -- Axel Beckert <abe@debian.org>  Tue, 17 Dec 2013 22:49:13 +0100
+ -- Axel Beckert <abe@debian.org>  Wed, 10 Sep 2014 01:12:28 +0200
 
 librun-parts-perl (0.06-1) unstable; urgency=low
 
