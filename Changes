@@ -20,7 +20,9 @@ Revision history for Run-Parts
         Use Travis CI for smoke testing and Coveralls.io for coverage
         reporting.
 
-        New tests added:
+        Fix passing backends as reference. Add test for that.
+
+        Further new tests added:
         + Verify behaviour upon unknown backend parameter.
 
 0.06    2013-07-22 20:47:16+02:00

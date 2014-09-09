@@ -1,6 +1,6 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 25;
+use Test::More tests => 33;
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
@@ -13,6 +13,7 @@ my $expected_output = read_file(\*DATA);
 my @expected_output = read_file(\*DATA, { chomp => 1 });
 
 use Run::Parts;
+use Run::Parts::Perl;
 
 # Testing the Debian backend
 SKIP: {
@@ -27,11 +28,15 @@ run_test_on_rp($d, 'perl');
 # Testing the automatically chosen backend
 run_test_on_rp($d);
 
+# Testing the perl backend, passed as reference
+run_test_on_rp($d, Run::Parts::Perl->new);
+
 sub run_test_on_rp {
     my ($d, $desc) = @_;
     my $rp = Run::Parts->new($d, $desc);
 
     $desc ||= 'default';
+    $desc = ref($desc) if ref($desc);
 
     ok($rp, 'Run::Parts->new($desc) returned non-nil');
 

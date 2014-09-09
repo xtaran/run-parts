@@ -98,7 +98,7 @@ sub new {
     my $backend = shift;
     if (defined $backend) {
         if (ref $backend) {
-            $self->{backend} = $backend->new($self->{dir});
+            $self->{backend} = ref($backend)->new($self->{dir});
         } elsif ($backend eq 'debian' or $backend eq 'run-parts') {
             use Run::Parts::Debian;
             $self->{backend} = Run::Parts::Debian->new($self->{dir});
