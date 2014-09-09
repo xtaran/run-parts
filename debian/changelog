@@ -1,5 +1,6 @@
-librun-parts-perl (0.06-2) UNRELEASED; urgency=low
+librun-parts-perl (0.07-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * Remove trailing slash from metacpan.org URLs, use HTTPS.
 
  -- Axel Beckert <abe@debian.org>  Tue, 17 Dec 2013 22:49:13 +0100
