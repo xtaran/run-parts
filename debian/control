@@ -16,6 +16,8 @@ Build-Depends-Indep: libautodie-perl,
                      libtaint-util-perl,
                      libtest-differences-perl,
                      libtest-nowarnings-perl,
+                     libtest-trap-perl,
+                     libtest-warnings-perl,
                      perl
 Standards-Version: 3.9.5
 Vcs-Browser: https://github.com/xtaran/run-parts

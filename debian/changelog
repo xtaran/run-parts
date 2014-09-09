@@ -1,16 +1,22 @@
-librun-parts-perl (0.07-1) UNRELEASED; urgency=low
+librun-parts-perl (0.07+dzil-1) UNRELEASED; urgency=low
 
-  * New upstream release
-  * Remove trailing slash from metacpan.org URLs, use HTTPS.
   * Use dh-dist-zilla for packaging.
-    + Drop build-dependency on libmodule-build-perl.
   * Make (build-) dependency on libfile-slurp-perl versioned (found by
     dh-dzil-refresh/dh-make-perl refresh)
   * Move most build-dependencies to Build-Depends-Indep as suggested by
     dh-dzil-refresh/dh-make-perl refresh.
   * Add origtargz target to generate non-CPAN upstream tar-balls from git.
 
- -- Axel Beckert <abe@debian.org>  Fri, 22 Aug 2014 16:42:09 +0200
+ -- Axel Beckert <abe@debian.org>  Wed, 10 Sep 2014 01:36:40 +0200
+
+librun-parts-perl (0.07-1) unstable; urgency=low
+
+  * New upstream release.
+    + Drop build-dependency on libmodule-build-perl.
+    + Add new build dependencies on libtest-{trap,warnings}-perl.
+  * Remove trailing slash from metacpan.org URLs, use HTTPS.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 10 Sep 2014 01:12:28 +0200
 
 librun-parts-perl (0.06-1) unstable; urgency=low
 
