@@ -1,6 +1,6 @@
-librun-parts-perl (0.06.90-1) UNRELEASED; urgency=low
+librun-parts-perl (0.07-1) UNRELEASED; urgency=low
 
-  * New upstream pre-release
+  * New upstream release
   * Remove trailing slash from metacpan.org URLs, use HTTPS.
   * Use dh-dist-zilla for packaging.
     + Drop build-dependency on libmodule-build-perl.
