@@ -108,12 +108,15 @@ sub new {
         } else {
             warn "Unknown backend $backend in use";
             require $backend;
+            # uncoverable statement
             $self->{backend} = $backend->new($self->{dir});
         }
     } else {
+        # uncoverable branch false
         if (-x '/bin/run-parts') {
             $self->{backend} = Run::Parts::Debian->new($self->{dir});
         } else {
+            # uncoverable statement
             $self->{backend} = Run::Parts::Perl->new($self->{dir});
         }
     }
