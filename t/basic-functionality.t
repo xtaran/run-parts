@@ -17,7 +17,7 @@ use_ok( 'Run::Parts::Perl' );
 
 # Testing the Debian backend
 SKIP: {
-    skip("$runpartsbin not found or not executable", 8)
+    skip("$runpartsbin not found or not executable", 16)
         unless -x $runpartsbin;
     run_test_on_rp($d, 'debian');
     run_test_on_rp($d, 'run-parts');

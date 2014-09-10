@@ -5,6 +5,9 @@ Revision history for Run-Parts
         Fix dist.ini to exclude emacs style backup files (except in
         the test data directory) as well as the cover_db.
 
+        Fix number of skipped tests in t/basic-functionality.t on
+        non-debianoid platforms.
+
 0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
