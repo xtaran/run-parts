@@ -9,8 +9,7 @@ Build-Depends: debhelper (>= 9),
                libdist-zilla-plugin-ourpkgversion-perl,
                libdist-zilla-plugin-podweaver-perl,
                libdist-zilla-plugin-test-perl-critic-perl
-Build-Depends-Indep: libautodie-perl,
-                     libexporter-easy-perl,
+Build-Depends-Indep: libexporter-easy-perl,
                      libfile-slurp-perl (>= 9999.17),
                      libmodern-perl-perl,
                      libtaint-util-perl,
@@ -26,8 +25,7 @@ Homepage: https://metacpan.org/release/Run-Parts
 
 Package: librun-parts-perl
 Architecture: all
-Depends: libautodie-perl,
-         libexporter-easy-perl,
+Depends: libexporter-easy-perl,
          libfile-slurp-perl (>= 9999.17),
          libmodern-perl-perl,
          libtaint-util-perl,

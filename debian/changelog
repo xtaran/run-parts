@@ -1,3 +1,9 @@
+librun-parts-perl (0.07+dzil-2) UNRELEASED; urgency=medium
+
+  * Drop (build-)dependency on libautodie-perl, it's a dual-life module.
+
+ -- Axel Beckert <abe@debian.org>  Wed, 10 Sep 2014 03:06:41 +0200
+
 librun-parts-perl (0.07+dzil-1) experimental; urgency=low
 
   * Use dh-dist-zilla for packaging.
