@@ -1,6 +1,11 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 51;
+use Test::More;
+END {
+    # Hack to work around
+    # https://rt.cpan.org/Public/Bug/Display.html?id=66485
+    done_testing();
+}
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
