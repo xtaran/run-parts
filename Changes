@@ -2,8 +2,8 @@ Revision history for Run-Parts
 
 0.08    Not released
 
-        Fix dist.ini to exclude emacs style backup files, except in
-        the test data directory.
+        Fix dist.ini to exclude emacs style backup files (except in
+        the test data directory) as well as the cover_db.
 
 0.07    2014-09-10 00:33:03+02:00
 
