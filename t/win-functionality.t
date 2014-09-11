@@ -4,7 +4,7 @@ use Test::More;
 use Test::Differences;
 
 if ($^O ne 'dos' and $^O ne 'os2' and $^O ne 'MSWin32' ) {
-    plan skip_all => 'Tests irrelevant on non-dos-ish systems';
+    plan skip_all => 'these tests are irrelevant on non-dos-ish systems';
 } else {
     plan tests => 11;
 }

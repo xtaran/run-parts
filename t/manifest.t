@@ -3,7 +3,7 @@ use Modern::Perl;
 use Test::More;
 
 unless ( $ENV{RELEASE_TESTING} ) {
-    plan( skip_all => "Author tests not required for installation" );
+    plan( skip_all => "these tests are for release candidate testing" );
 }
 
 my $min_tcm = 0.9;
