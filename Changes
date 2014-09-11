@@ -11,6 +11,8 @@ Revision history for Run-Parts
 
         Fix Author vs Release test in t/manifest.t's skip message.
 
+        Only run t/changes.t if $RELEASE_TESTING is set.
+
 0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
