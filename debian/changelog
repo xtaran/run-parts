@@ -1,3 +1,9 @@
+librun-parts-perl (0.08-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Axel Beckert <abe@debian.org>  Thu, 11 Sep 2014 18:12:48 +0200
+
 librun-parts-perl (0.07-1) unstable; urgency=low
 
   * New upstream release.
