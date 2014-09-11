@@ -15,6 +15,8 @@ Revision history for Run-Parts
 
         Update t/win-*.t skip messages to in line with the others.
 
+        Add a Test::Kwalitee based test.
+
 0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
