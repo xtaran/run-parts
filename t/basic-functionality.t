@@ -1,6 +1,11 @@
 #!perl -T
 use Modern::Perl;
-use Test::More tests => 51;
+use Test::More;
+END {
+    # Hack to work around
+    # https://rt.cpan.org/Public/Bug/Display.html?id=66485
+    done_testing();
+}
 use Test::NoWarnings;
 use Test::Differences;
 use File::Slurp 9999.06;
@@ -15,10 +20,8 @@ my @expected_output = read_file(\*DATA, { chomp => 1 });
 use_ok( 'Run::Parts' );
 use_ok( 'Run::Parts::Perl' );
 
-# Testing the Debian backend
-SKIP: {
-    skip("$runpartsbin not found or not executable", 8)
-        unless -x $runpartsbin;
+# Only run the Debian backend tests if /bin/run-parts exists
+if (-x $runpartsbin) {
     run_test_on_rp($d, 'debian');
     run_test_on_rp($d, 'run-parts');
 }
