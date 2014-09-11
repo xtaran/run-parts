@@ -1,5 +1,22 @@
 Revision history for Run-Parts
 
+0.08    2014-09-11 16:57:00+02:00
+
+        Fix dist.ini to exclude emacs style backup files (except in
+        the test data directory) as well as the cover_db.
+
+        Hack around RT#66485 to be able to use done_testing() together
+        with Test::NoWarnings. Also fixes number of skipped tests in
+        t/basic-functionality.t on non-debianoid platforms.
+
+        Fix Author vs Release test in t/manifest.t's skip message.
+
+        Only run t/changes.t if $RELEASE_TESTING is set.
+
+        Update t/win-*.t skip messages to in line with the others.
+
+        Add a Test::Kwalitee based test.
+
 0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
