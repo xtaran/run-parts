@@ -1,9 +1,9 @@
-librun-parts-perl (0.08+dzil-1) UNRELEASED; urgency=medium
+librun-parts-perl (0.08+dzil-1) experimental; urgency=low
 
   * New upstream release
   * Drop (build-)dependency on libautodie-perl, it's a dual-life module.
 
- -- Axel Beckert <abe@debian.org>  Wed, 10 Sep 2014 03:06:41 +0200
+ -- Axel Beckert <abe@debian.org>  Thu, 11 Sep 2014 23:55:40 +0200
 
 librun-parts-perl (0.07+dzil-1) experimental; urgency=low
 
