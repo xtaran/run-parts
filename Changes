@@ -9,6 +9,8 @@ Revision history for Run-Parts
         with Test::NoWarnings. Also fixes number of skipped tests in
         t/basic-functionality.t on non-debianoid platforms.
 
+        Fix Author vs Release test in t/manifest.t's skip message.
+
 0.07    2014-09-10 00:33:03+02:00
 
         Add test that the change log conforms to CPAN::Changes::Spec.
