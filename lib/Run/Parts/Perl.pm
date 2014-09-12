@@ -2,7 +2,10 @@ package Run::Parts::Perl;
 
 # ABSTRACT: Pure Perl implementation of Debian's run-parts tool
 
-use Modern::Perl;
+use strict;
+use warnings;
+use 5.010;
+
 use autodie;
 use Taint::Util;
 use Run::Parts::Common;

@@ -2,7 +2,9 @@ package Run::Parts;
 
 # ABSTRACT: Offers functionality of Debian's run-parts tool in Perl
 
-use Modern::Perl;
+use strict;
+use warnings;
+use 5.010;
 
 use File::Slurp 9999.17;
 use Run::Parts::Common;
