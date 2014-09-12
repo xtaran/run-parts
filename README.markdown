@@ -58,6 +58,18 @@ By default `Run::Parts` uses `Run::Parts::Debian` if `/bin/run-parts`
 exists, `Run::Parts::Perl` otherwise. But you can also choose any of
 the backends explicitly.
 
+Distribution and Download
+-------------------------
+
+* [Git repository on GitHub](https://github.com/xtaran/run-parts)
+* On the Comprehensive Perl Archive Network (CPAN):
+  * [Run-Parts on MetaCPAN](https://metacpan.org/release/Run-Parts)
+  * [Run-Parts on search.cpan.org](http://search.cpan.org/dist/Run-Parts/)
+* [librun-parts-perl in Debian](https://packages.debian.org/librun-parts-perl)
+  [QA page](https://tracker.debian.org/pkg/librun-parts-perl)
+* [librun-parts-perl in Ubuntu](http://packages.ubuntu.com/librun-parts-perl)
+  [Launchpad page](https://launchpad.net/ubuntu/+source/librun-parts-perl)
+
 Author, License and Copyright
 -----------------------------
 
@@ -73,3 +85,15 @@ or (at your option)
 [Artistic License](http://dev.perl.org/licenses/artistic.html).
 
 See http://dev.perl.org/licenses/ for more information.
+
+Testing, Continuous Integration and Code Coverage
+-------------------------------------------------
+
+* [Travis CI Build Status](https://travis-ci.org/xtaran/run-parts)
+  (after each `git push`)
+* [Coveralls.io Statement Coverage Status](https://coveralls.io/r/xtaran/run-parts)
+  (after each `git push`)
+* [CPANTS Kwalitee](http://cpants.cpanauthors.org/dist/Run-Parts)
+  (once after each upload to CPAN)
+* [CPAN Testers Smoke Tests](http://www.cpantesters.org/distro/R/Run-Parts.html)
+  (on many platforms and Perl versions after each upload to CPAN)
