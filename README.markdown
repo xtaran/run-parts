@@ -97,5 +97,10 @@ Testing, Continuous Integration and Code Coverage
   (once after each upload to CPAN)
 * [CPAN Testers Smoke Tests](http://www.cpantesters.org/distro/R/Run-Parts.html)
   (on many platforms and Perl versions after each upload to CPAN)
+* [Piuparts](https://piuparts.debian.org/sid/source/u/librun-parts-perl.html)
+  (package installation, upgrading and removal testing; at least after
+  each upload to Debian)
+* [Debcheck](https://qa.debian.org/debcheck.php?dist=unstable&package=librun-parts-perl)
+  (mostly dependency checking; at least after each upload to Debian)
 * [Code Statistics on OpenHub (formerly Ohloh)](https://www.openhub.net/p/run-parts)
   (every few days)
