@@ -97,3 +97,4 @@ Testing, Continuous Integration and Code Coverage
   (once after each upload to CPAN)
 * [CPAN Testers Smoke Tests](http://www.cpantesters.org/distro/R/Run-Parts.html)
   (on many platforms and Perl versions after each upload to CPAN)
+* [Code Statistics on OpenHub (formerly Ohloh)](https://www.openhub.net/p/run-parts)
