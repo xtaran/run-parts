@@ -104,3 +104,4 @@ Testing, Continuous Integration and Code Coverage
   (mostly dependency checking; at least after each upload to Debian)
 * [Code Statistics on OpenHub (formerly Ohloh)](https://www.openhub.net/p/run-parts)
   (every few days)
+* [Code Coverage of Run-Parts 0.08 at cpancover.com](http://cpancover.com/staging/Run-Parts-0.08/index.html)
