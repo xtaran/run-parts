@@ -11,6 +11,8 @@ Revision history for Run-Parts
 
         Move release tests to xt/release and drop %ENV checking code.
 
+        Require Test::Warnings >= 0.005 for "warnings".
+
 0.08    2014-09-11 16:57:00+02:00
 
         Fix dist.ini to exclude emacs style backup files (except in
