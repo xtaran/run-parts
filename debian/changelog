@@ -2,6 +2,7 @@ librun-parts-perl (0.08+dzil-2) UNRELEASED; urgency=medium
 
   * Let dpkg-source ignore the cover_db directory.
   * Set dh-dist-zilla branch in debian/gbp.conf and debian/control
+  * Declare compliance with Debian Policy 3.9.6 (no other changes needed).
 
  -- Axel Beckert <abe@debian.org>  Sat, 16 May 2015 14:07:07 +0200
 

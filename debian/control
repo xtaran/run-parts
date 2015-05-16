@@ -18,7 +18,7 @@ Build-Depends-Indep: libexporter-easy-perl,
                      libtest-trap-perl,
                      libtest-warnings-perl,
                      perl
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Browser: https://github.com/xtaran/run-parts
 Vcs-Git: git://github.com/xtaran/run-parts.git -b dh-dist-zilla
 Homepage: https://metacpan.org/release/Run-Parts
