@@ -13,6 +13,9 @@ Revision history for Run-Parts
 
         Require Test::Warnings >= 0.005 for "warnings".
 
+        Replace individual xt/release/kwalitee.t with
+        Dist::Zilla::Plugin::Test::Kwalitee
+
 0.08    2014-09-11 16:57:00+02:00
 
         Fix dist.ini to exclude emacs style backup files (except in
