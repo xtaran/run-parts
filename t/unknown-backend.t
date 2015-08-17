@@ -1,7 +1,11 @@
 #!perl -T
-use Modern::Perl;
+
+use strict;
+use warnings;
+use 5.010;
+
 use Test::More;
-use Test::Warnings qw(warning);
+use Test::Warnings 0.005 qw(warning);
 use Test::Differences;
 
 delete @ENV{qw{PATH ENV IFS CDPATH BASH_ENV}};

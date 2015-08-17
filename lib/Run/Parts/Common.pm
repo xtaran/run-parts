@@ -2,7 +2,10 @@ package Run::Parts::Common;
 
 # ABSTRACT: Common helpers for Run::Parts and its backends
 
-use Modern::Perl;
+use strict;
+use warnings;
+use 5.010;
+
 use Exporter::Easy ( EXPORT => [qw[lines chomped_lines]] );
 use Scalar::Util qw(blessed);
 

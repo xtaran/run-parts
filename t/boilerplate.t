@@ -1,5 +1,9 @@
 #!perl -T
-use Modern::Perl;
+
+use strict;
+use warnings;
+use 5.010;
+
 use Test::More;
 
 sub not_in_file_ok {
