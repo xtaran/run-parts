@@ -6,6 +6,10 @@
 override_dh_clean:
 	dh_clean -Xt/basic-dummy/fnord~ -Xt/basic-dummy/script~
 
+# This is probably something dh-dist-zilla should provide in the future, too.
 origtargz get-orig-source:
-	git archive --format=tar --output=../`debian/packagename_and_upstream_version.sh`.orig.tar --prefix=`debian/packagename_and_upstream_version.sh`/ HEAD
+	git archive --format=tar \
+	            --output=../`debian/packagename_and_upstream_version.sh`.orig.tar \
+                    --prefix=`debian/packagename_and_upstream_version.sh`/ \
+		    HEAD
 	xz -7fv ../`debian/packagename_and_upstream_version.sh`.orig.tar
