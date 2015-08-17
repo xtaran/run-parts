@@ -9,7 +9,7 @@ perl:
 
 install:
    # Deal with all of the DZIL dependencies, quickly and quietly
-   - cpanm --quiet --notest --skip-satisfied Dist::Zilla Devel::Cover::Report::Coveralls Dist::Zilla::Plugin::Test::Kwalitee
+   - cpanm --quiet --notest --skip-satisfied Dist::Zilla Devel::Cover::Report::Coveralls Dist::Zilla::Plugin::Test::Kwalitee Test::Kwalitee
    - dzil authordeps | grep -vP '[^\w:]' | xargs -n 5 -P 10 cpanm --quiet --notest --skip-satisfied
    # There seems a missing build-dependency on Pod::Coverage::TrustPod somewhere
    - cpanm --quiet --notest Pod::Coverage::TrustPod
