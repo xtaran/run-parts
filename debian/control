@@ -8,15 +8,15 @@ Build-Depends: debhelper (>= 9),
                libdist-zilla-plugin-githubmeta-perl,
                libdist-zilla-plugin-ourpkgversion-perl,
                libdist-zilla-plugin-podweaver-perl,
-               libdist-zilla-plugin-test-perl-critic-perl
+               libdist-zilla-plugin-test-perl-critic-perl,
+               libdist-zilla-plugin-test-kwalitee-perl
 Build-Depends-Indep: libexporter-easy-perl,
                      libfile-slurp-perl (>= 9999.17),
-                     libmodern-perl-perl,
                      libtaint-util-perl,
                      libtest-differences-perl,
                      libtest-nowarnings-perl,
                      libtest-trap-perl,
-                     libtest-warnings-perl,
+                     libtest-warnings-perl (>= 0.005),
                      perl
 Standards-Version: 3.9.6
 Vcs-Browser: https://github.com/xtaran/run-parts
