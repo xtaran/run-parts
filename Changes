@@ -1,6 +1,6 @@
 Revision history for Run-Parts
 
-0.09    Development
+0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.
         Drop perlcritic.rc.
