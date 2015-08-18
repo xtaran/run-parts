@@ -22,6 +22,7 @@ Standards-Version: 3.9.6
 Vcs-Browser: https://github.com/xtaran/run-parts
 Vcs-Git: git://github.com/xtaran/run-parts.git
 Homepage: https://metacpan.org/release/Run-Parts
+Testsuite: autopkgtest-pkg-perl
 
 Package: librun-parts-perl
 Architecture: all
