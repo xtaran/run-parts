@@ -28,7 +28,6 @@ Package: librun-parts-perl
 Architecture: all
 Depends: libexporter-easy-perl,
          libfile-slurp-perl (>= 9999.17),
-         libmodern-perl-perl,
          libtaint-util-perl,
          ${misc:Depends},
          ${perl:Depends}

@@ -5,6 +5,7 @@ librun-parts-perl (0.09-2) UNRELEASED; urgency=medium
   * Mark package as autopkgtestable via pkg-perl-autopkgtest/autodep8.
   * Remove get-orig-source target from debian/rules. dh-dist-zilla
     provides such a feature now.
+  * Remove libmodern-perl-perl also from the run-time dependencies.
 
  -- Axel Beckert <abe@debian.org>  Tue, 18 Aug 2015 03:05:56 +0200
 
