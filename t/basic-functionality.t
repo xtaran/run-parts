@@ -87,9 +87,9 @@ sub run_test_on_rp {
 __DATA__
 Bar
 Foo
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 print "Works\n";
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 print "Works, too!\n";

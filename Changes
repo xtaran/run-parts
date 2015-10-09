@@ -16,6 +16,11 @@ Revision history for Run-Parts
         Replace individual xt/release/kwalitee.t with
         Dist::Zilla::Plugin::Test::Kwalitee
 
+        Replace "#!/usr/bin/perl" in test suite example scripts with
+        "#!/usr/bin/env perl" to fix test suite failures on
+        DragonFlyBSD which has no more compatibility link at
+        /usr/bin/perl since recently.
+
 0.08    2014-09-11 16:57:00+02:00
 
         Fix dist.ini to exclude emacs style backup files (except in
