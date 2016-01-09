@@ -1,3 +1,10 @@
+librun-parts-perl (0.09-3) UNRELEASED; urgency=medium
+
+  * Merge redundant and contradictory debian/docs and
+    debian/librun-parts-perl.docs files.
+
+ -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
+
 librun-parts-perl (0.09-2) unstable; urgency=medium
 
   * No more list dh-dist-zilla branch as packaging branch.
