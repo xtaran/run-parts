@@ -18,3 +18,10 @@ Run-Parts-*
 Run-Parts-*.tar.gz
 *.bak
 *~
+
+# Debian package build artefacts
+/debian/*.debhelper.log
+/debian/*.substvars
+/debian/*-stamp
+/debian/files
+/debian/librun-parts-perl/
