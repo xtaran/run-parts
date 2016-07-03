@@ -8,8 +8,8 @@ Build-Depends: debhelper (>= 9),
                libdist-zilla-plugin-githubmeta-perl,
                libdist-zilla-plugin-ourpkgversion-perl,
                libdist-zilla-plugin-podweaver-perl,
-               libdist-zilla-plugin-test-perl-critic-perl,
-               libdist-zilla-plugin-test-kwalitee-perl
+               libdist-zilla-plugin-test-kwalitee-perl,
+               libdist-zilla-plugin-test-perl-critic-perl
 Build-Depends-Indep: libexporter-easy-perl,
                      libfile-slurp-perl (>= 9999.17),
                      libtaint-util-perl,
