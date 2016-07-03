@@ -3,6 +3,7 @@ librun-parts-perl (0.09-3) UNRELEASED; urgency=medium
   * Merge redundant and contradictory debian/docs and
     debian/librun-parts-perl.docs files.
   * Remove no more needed debian/packagename_and_upstream_version.sh.
+  * Use https:// in debian/copyright format specification.
 
  -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
 
