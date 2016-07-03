@@ -4,6 +4,7 @@ librun-parts-perl (0.09-3) UNRELEASED; urgency=medium
     debian/librun-parts-perl.docs files.
   * Remove no more needed debian/packagename_and_upstream_version.sh.
   * Use https:// in debian/copyright format specification.
+  * Use https:// instead of git:// in Vcs-Git header.
   * Apply wrap-and-sort.
 
  -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
