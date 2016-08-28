@@ -9,11 +9,14 @@ perl:
   - "5.12"
   - "5.10"
   - "dev"
+  - "blead"
 
 matrix:
   include:
     - perl: "5.24-thr"
       env: COVERAGE=1
+  allow_failures:
+    - perl: blead
 
 sudo: false
 
