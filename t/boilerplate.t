@@ -42,7 +42,7 @@ not_in_file_ok(Changes =>
     "placeholder date/time"       => qr(Date/time)
     );
 
-foreach my $pm (<lib/Run/*.pm>, <lib/Run/Parts/*.pm>) {
+foreach my $pm (glob 'lib/Run/*.pm lib/Run/Parts/*.pm') {
     module_boilerplate_ok($pm);
 }
 

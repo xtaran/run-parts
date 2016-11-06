@@ -88,8 +88,10 @@ __DATA__
 Bar
 Foo
 #!/usr/bin/env perl
+use strict;
 
 print "Works\n";
 #!/usr/bin/env perl
+use strict;
 
 print "Works, too!\n";

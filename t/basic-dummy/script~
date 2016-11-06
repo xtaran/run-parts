@@ -1,3 +1,4 @@
 #!perl
+use strict;
 
 print "Should not be executed!\n";
