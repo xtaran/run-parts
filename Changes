@@ -7,6 +7,9 @@ Revision history for Run-Parts
         DragonFlyBSD which has no more compatibility link at
         /usr/bin/perl since recently.
 
+        Fix issues reported by default perlcritic. (Patch by Alex
+        Muntada, thanks!)
+
 0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.
