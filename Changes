@@ -10,6 +10,8 @@ Revision history for Run-Parts
         Fix issues reported by default perlcritic. (Patch by Alex
         Muntada, thanks!)
 
+        Add repology package list badges to README.markdown.
+
 0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.
