@@ -6,6 +6,7 @@ librun-parts-perl (0.10-1) UNRELEASED; urgency=medium
   * Use https:// in debian/copyright format specification.
   * Use https:// instead of git:// in Vcs-Git header.
   * Apply wrap-and-sort.
+  * Declare compliance with Debian Policy 4.1.1.
 
  -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
 
