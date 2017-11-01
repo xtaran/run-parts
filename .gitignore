@@ -25,3 +25,4 @@ Run-Parts-*.tar.gz
 /debian/*-stamp
 /debian/files
 /debian/librun-parts-perl/
+/debian/.debhelper/
