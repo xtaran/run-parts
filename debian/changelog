@@ -1,4 +1,4 @@
-librun-parts-perl (0.09-3) UNRELEASED; urgency=medium
+librun-parts-perl (0.10-1) UNRELEASED; urgency=medium
 
   * Merge redundant and contradictory debian/docs and
     debian/librun-parts-perl.docs files.
