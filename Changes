@@ -15,6 +15,9 @@ Revision history for Run-Parts
         Switch bug tracker from rt.cpan.org to GitHub as rt.cpan.org
         is going away.
 
+        Fix RT#127691 + GH#1 by checking, too, if /bin/run-parts is
+        Debian's implementation.
+
 0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.

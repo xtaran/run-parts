@@ -41,9 +41,11 @@ eq_or_diff(''.$rpd->test,
            ''.$rpp->test,
            "Both return same list of executables in string context");
 
-# Executes executable files
-eq_or_diff(''.$rpd->run,
-           ''.$rpp->run,
-           "Both return same output of ran executables");
+if (`$runpartsbin --version` =~ /Debian run-parts/) {
+    # Executes executable files, doesn't work with RedHat's run-parts
+    eq_or_diff(''.$rpd->run,
+               ''.$rpp->run,
+               "Both return same output of ran executables");
+};
 
 done_testing();

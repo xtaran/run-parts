@@ -25,7 +25,8 @@ use_ok( 'Run::Parts' );
 use_ok( 'Run::Parts::Perl' );
 
 # Only run the Debian backend tests if /bin/run-parts exists
-if (-x $runpartsbin) {
+if (-x $runpartsbin and `$runpartsbin --version` =~ /Debian run-parts/) {
+    # Executes executable files, doesn't work with RedHat's run-parts
     run_test_on_rp($d, 'debian');
     run_test_on_rp($d, 'run-parts');
 }
