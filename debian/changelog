@@ -9,6 +9,8 @@ librun-parts-perl (0.10-1) UNRELEASED; urgency=medium
   * Apply wrap-and-sort.
   * Declare compliance with Debian Policy 4.5.1.
   * Set "Rules-Requires-Root: no".
+  * Bump debhelper compatibility level to 13.
+    + Build-depend on "debhelper-compat (= 13)" to replace debian/compat.
 
  -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
 
