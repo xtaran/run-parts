@@ -11,6 +11,7 @@ librun-parts-perl (0.10-1) UNRELEASED; urgency=medium
   * Set "Rules-Requires-Root: no".
   * Bump debhelper compatibility level to 13.
     + Build-depend on "debhelper-compat (= 13)" to replace debian/compat.
+  * Bump debian/watch version from 3 to 4. Thanks Lintian!
 
  -- Axel Beckert <abe@debian.org>  Sat, 09 Jan 2016 20:06:26 +0100
 
