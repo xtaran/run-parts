@@ -1,5 +1,6 @@
 librun-parts-perl (0.10-1) UNRELEASED; urgency=medium
 
+  * New upstream release with mostly cosmetic fixes.
   * Merge redundant and contradictory debian/docs and
     debian/librun-parts-perl.docs files.
   * Remove no more needed debian/packagename_and_upstream_version.sh.
