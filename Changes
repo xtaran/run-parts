@@ -18,6 +18,8 @@ Revision history for Run-Parts
         Fix RT#127691 + GH#1 by checking, too, if /bin/run-parts is
         Debian's implementation.
 
+        Fix link to Kwalitee status in README.
+
 0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.

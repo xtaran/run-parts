@@ -4,7 +4,7 @@ Run::Parts — run-parts in Perl
 [![Travis CI Build Status](https://travis-ci.org/xtaran/run-parts.svg)](https://travis-ci.org/xtaran/run-parts)
 [![Coverage by Coveralls](https://img.shields.io/coveralls/xtaran/run-parts.svg)](https://coveralls.io/r/xtaran/run-parts)
 [![Coverage by Codecov](https://codecov.io/gh/xtaran/run-parts/branch/master/graph/badge.svg)](https://codecov.io/gh/xtaran/run-parts)
-[![Kwalitee status](http://cpants.cpanauthors.org/dist/Run-Parts.png)](http://cpants.charsbar.org/dist/overview/Run-Parts)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Run-Parts.png)](http://cpants.charsbar.org/dist/Run-Parts)
 [![CPAN version](https://img.shields.io/cpan/v/Run-Parts.svg)](https://metacpan.org/release/Run-Parts)
 [![CPAN](https://img.shields.io/cpan/l/Run-Parts.svg)](https://metacpan.org/release/Run-Parts)
 [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/xtaran/run-parts.svg)](https://libraries.io/cpan/Run-Parts)
