@@ -1,0 +1,9 @@
+# https://wiki.debian.org/UpstreamMetadata
+---
+Homepage: https://github.com/xtaran/run-parts#readme
+Changelog: https://github.com/xtaran/run-parts/blob/master/Changes
+Repository: https://github.com/xtaran/run-parts.git
+Repository-Browse: https://github.com/xtaran/run-parts
+Bug-Database: https://github.com/xtaran/run-parts/issues
+Bug-Submit: https://github.com/xtaran/run-parts/issues/new
+Security-Contact: mailto:abe@deuxchevaux.org
