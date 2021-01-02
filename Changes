@@ -20,6 +20,8 @@ Revision history for Run-Parts
 
         Fix link to Kwalitee status in README.
 
+        Enable Dist::Zilla::Plugin::MetaProvides::Package in dist.ini.
+
 0.09    2015-08-18 02:23:22+0200
 
         Replace Modern::Perl with "use 5.010;" + strict and warnings.
