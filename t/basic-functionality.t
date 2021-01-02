@@ -78,10 +78,12 @@ sub run_test_on_rp {
                  "$d/script\n$d/script2\n",
                  "Returns list of executables in string context ($desc)");
 
-      # Executes executable files
-      eq_or_diff(''.$rp->run,
-                 "Works\nWorks, too!\n",
-                 "Returns output of ran executables ($desc)");
+      # Executes executable files (test works only in Debianesk systems
+      if (`$runpartsbin --version` =~ /Debian run-parts/) {
+          eq_or_diff(''.$rp->run,
+                     "Works\nWorks, too!\n",
+                     "Returns output of ran executables ($desc)");
+      }
     }
 }
 
