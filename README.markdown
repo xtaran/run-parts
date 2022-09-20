@@ -8,6 +8,7 @@ Run::Parts — run-parts in Perl
 [![CPAN version](https://img.shields.io/cpan/v/Run-Parts.svg)](https://metacpan.org/release/Run-Parts)
 [![CPAN](https://img.shields.io/cpan/l/Run-Parts.svg)](https://metacpan.org/release/Run-Parts)
 [![Libraries.io for GitHub](https://img.shields.io/librariesio/github/xtaran/run-parts.svg)](https://libraries.io/cpan/Run-Parts)
+[![kandi X-Ray](https://kandi.openweaver.com/badges/xray.svg)](https://kandi.openweaver.com/perl/xtaran/run-parts)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/perl:run-parts.svg)](https://repology.org/metapackage/perl:run-parts)
 
